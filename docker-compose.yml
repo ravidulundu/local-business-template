@@ -1,0 +1,10 @@
+services:
+  web:
+    image: nginx:alpine
+    container_name: local-business-template-web
+    restart: unless-stopped
+    volumes:
+      - ./public:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    expose:
+      - "80"
