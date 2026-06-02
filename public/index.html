@@ -3,58 +3,577 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ateliê Digital - Landing Page</title>
+  <title>Costureira em Salvador | Ajustes e Consertos de Roupas</title>
+  <meta name="description" content="Ajustes, barras, consertos e pequenos reparos de roupas em Salvador. Atendimento por WhatsApp.">
+  <link rel="preconnect" href="https://images.unsplash.com">
   <style>
+    :root {
+      --bg: #fbf7f0;
+      --card: #ffffff;
+      --text: #1d1a16;
+      --muted: #6f675f;
+      --brand: #8b4a2f;
+      --brand-dark: #5f2f1d;
+      --line: #eadfd2;
+      --soft: #f3e8dc;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f3ed;
-      color: #1f1f1f;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
-    .wrap {
-      max-width: 920px;
+
+    a { color: inherit; }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 56px 20px;
     }
-    .card {
-      background: white;
-      border-radius: 24px;
-      padding: 40px;
-      box-shadow: 0 20px 60px rgba(0,0,0,.08);
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(251, 247, 240, .92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
     }
-    h1 {
-      font-size: 42px;
-      margin: 0 0 16px;
+
+    .nav {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: -.03em;
+      font-size: 22px;
     }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
     .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 22px;
-      background: #111;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      background: var(--brand);
       color: white;
       text-decoration: none;
+      font-weight: 700;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .btn:hover { background: var(--brand-dark); }
+
+    .btn.secondary {
+      background: white;
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+
+    .hero {
+      padding: 72px 0 48px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--brand-dark);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: .96;
+      letter-spacing: -.06em;
+    }
+
+    .lead {
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.65;
+      max-width: 620px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .hero-image {
+      min-height: 500px;
+      border-radius: 32px;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.05), rgba(0,0,0,.35)),
+        url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80') center/cover;
+      box-shadow: 0 24px 70px rgba(85, 54, 35, .20);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .floating-card {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(255,255,255,.6);
+      border-radius: 22px;
+      padding: 18px;
+      backdrop-filter: blur(10px);
+    }
+
+    .floating-card strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .floating-card span {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    section {
+      padding: 54px 0;
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 44px);
+      letter-spacing: -.04em;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 460px;
+      line-height: 1.6;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    .service-card .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--soft);
+      color: var(--brand-dark);
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 15px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 16px;
+    }
+
+    .photo {
+      min-height: 340px;
+      border-radius: 28px;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .photo.small { min-height: 250px; }
+
+    .photo span {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      padding: 8px 12px;
+      background: rgba(255,255,255,.9);
       border-radius: 999px;
       font-weight: 700;
+      font-size: 13px;
     }
-    .note {
-      margin-top: 28px;
+
+    .stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .review {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    .stars {
+      color: #b7791f;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .review p {
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0 0 14px;
+    }
+
+    .review strong { font-size: 14px; }
+
+    .location {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .info-box {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 28px;
+    }
+
+    .info-row {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .info-row:last-child { border-bottom: 0; }
+
+    .info-row span {
+      display: block;
+      color: var(--muted);
       font-size: 14px;
-      color: #666;
+      margin-bottom: 4px;
+    }
+
+    .info-row strong { font-size: 17px; }
+
+    .map-placeholder {
+      min-height: 360px;
+      border-radius: 28px;
+      background:
+        linear-gradient(135deg, rgba(139,74,47,.18), rgba(95,47,29,.05)),
+        repeating-linear-gradient(45deg, transparent 0 18px, rgba(139,74,47,.08) 18px 19px);
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 30px;
+      color: var(--brand-dark);
+      font-weight: 800;
+    }
+
+    .cta {
+      background: var(--brand-dark);
+      color: white;
+      border-radius: 32px;
+      padding: 42px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .cta h2 { color: white; }
+
+    .cta p {
+      color: rgba(255,255,255,.78);
+      margin: 12px 0 0;
+      line-height: 1.6;
+    }
+
+    footer {
+      padding: 28px 0 42px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      .hero-grid,
+      .gallery,
+      .location {
+        grid-template-columns: 1fr;
+      }
+      .services,
+      .reviews {
+        grid-template-columns: 1fr;
+      }
+      .hero-image { min-height: 380px; }
+      .section-title {
+        display: block;
+      }
+      .section-title p {
+        margin-top: 12px;
+      }
+      .cta {
+        display: block;
+      }
+      .cta .btn {
+        margin-top: 22px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <main class="wrap">
-    <section class="card">
-      <h1>Landing page funcionando.</h1>
-      <p>Base inicial para negócios locais: costureira, salão, restaurante, pet shop e serviços por WhatsApp.</p>
-      <a class="btn" href="https://wa.me/5500000000000">Pedir orçamento pelo WhatsApp</a>
-      <div class="note">Deploy via Docker + Nginx + Dokploy.</div>
+  <header>
+    <div class="container nav">
+      <div class="logo">Ateliê da Costura</div>
+      <nav class="nav-links">
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Antes e depois</a>
+        <a href="#localizacao">Localização</a>
+      </nav>
+      <a class="btn" href="https://wa.me/5500000000000">WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Costureira em Salvador</div>
+          <h1>Ajustes e consertos de roupas com atendimento pelo WhatsApp.</h1>
+          <p class="lead">
+            Fazemos barras, ajustes, troca de zíper, pequenos reparos e reformas de peças.
+            Envie uma foto da roupa pelo WhatsApp para receber uma orientação inicial.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="https://wa.me/5500000000000">Pedir orçamento</a>
+            <a class="btn secondary" href="#servicos">Ver serviços</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="floating-card">
+            <strong>Atendimento prático e direto</strong>
+            <span>Envie foto da peça, tipo de ajuste desejado e prazo. Respondemos pelo WhatsApp.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <div class="section-title">
+          <h2>Serviços mais pedidos</h2>
+          <p>Uma estrutura simples para o cliente entender rapidamente o que a costureira faz e chamar no WhatsApp.</p>
+        </div>
+
+        <div class="services">
+          <article class="service-card">
+            <div class="icon">01</div>
+            <h3>Barra de calça</h3>
+            <p>Ajuste de comprimento para calças jeans, social e outras peças.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">02</div>
+            <h3>Ajuste de vestido</h3>
+            <p>Pequenos ajustes, redução, acerto de caimento e reparos.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">03</div>
+            <h3>Troca de zíper</h3>
+            <p>Substituição de zíper em calças, saias, vestidos e jaquetas.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">04</div>
+            <h3>Ajuste de camisa</h3>
+            <p>Ajustes simples para melhorar caimento e acabamento da peça.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">05</div>
+            <h3>Reparos em roupas</h3>
+            <p>Consertos de costura, pequenos rasgos e reforços de acabamento.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">06</div>
+            <h3>Reformas de peças</h3>
+            <p>Transformações simples para reaproveitar roupas paradas no armário.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <div class="container">
+        <div class="section-title">
+          <h2>Antes e depois</h2>
+          <p>Placeholder visual. Depois substituímos por fotos reais da loja, das peças e dos trabalhos finalizados.</p>
+        </div>
+
+        <div class="gallery">
+          <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80')">
+            <span>Ajuste de caimento</span>
+          </div>
+
+          <div class="stack">
+            <div class="photo small" style="background-image:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80')">
+              <span>Reparo de peça</span>
+            </div>
+            <div class="photo small" style="background-image:url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80')">
+              <span>Acabamento</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="avaliacoes">
+      <div class="container">
+        <div class="section-title">
+          <h2>Avaliações</h2>
+          <p>Depois vamos ligar isso ao link de avaliações do Google Business Profile.</p>
+        </div>
+
+        <div class="reviews">
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>Atendimento rápido e serviço bem feito. A roupa ficou com ótimo caimento.</p>
+            <strong>Cliente local</strong>
+          </article>
+
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>Consegui falar pelo WhatsApp e resolver o ajuste sem complicação.</p>
+            <strong>Cliente local</strong>
+          </article>
+
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>Boa comunicação, prazo claro e acabamento caprichado.</p>
+            <strong>Cliente local</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="localizacao">
+      <div class="container location">
+        <div class="info-box">
+          <h2>Localização</h2>
+
+          <div class="info-row">
+            <span>Bairro</span>
+            <strong>Salvador - BA</strong>
+          </div>
+
+          <div class="info-row">
+            <span>Atendimento</span>
+            <strong>Por WhatsApp e presencial com horário combinado</strong>
+          </div>
+
+          <div class="info-row">
+            <span>Horário</span>
+            <strong>Segunda a sexta, horário comercial</strong>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn" href="https://wa.me/5500000000000">Chamar no WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="map-placeholder">
+          Google Maps placeholder<br>
+          Depois colocamos o endereço real ou link do perfil no Google.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta">
+          <div>
+            <h2>Precisa ajustar uma roupa?</h2>
+            <p>Envie uma foto da peça pelo WhatsApp e informe o tipo de ajuste desejado.</p>
+          </div>
+          <a class="btn secondary" href="https://wa.me/5500000000000">Pedir orçamento agora</a>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Ateliê da Costura. Site piloto por Ravi Dulundu.
+    </div>
+  </footer>
 </body>
 </html>
