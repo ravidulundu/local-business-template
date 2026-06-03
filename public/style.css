@@ -69,7 +69,7 @@ a {
 }
 
 .header-inner {
-  min-height: 88px;
+  min-height: 96px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -78,29 +78,45 @@ a {
 
 .brand {
   display: grid;
-  gap: 7px;
+  gap: 4px;
+  align-items: center;
+  justify-items: center;
   min-width: max-content;
+  text-align: center;
 }
 
-.brand-name,
+.brand-logo {
+  width: clamp(154px, 15vw, 210px);
+  height: auto;
+  margin: -58px 0 -60px;
+}
+
+.footer-logo {
+  width: 198px;
+  height: auto;
+  margin: -58px auto -50px;
+}
+
 .site-footer strong {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-size: clamp(25px, 3vw, 35px);
   line-height: .92;
 }
 
-.brand-name span,
 .site-footer strong span,
 .hero h1 span {
   color: var(--gold);
 }
 
 .brand-subtitle {
+  display: block;
   color: var(--muted);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: .16em;
+  text-align: center;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .main-nav {
@@ -608,6 +624,12 @@ h2 {
   gap: 30px;
 }
 
+.footer-grid > div:first-child {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
 .site-footer span {
   display: block;
   margin-bottom: 10px;
@@ -668,7 +690,7 @@ h2 {
   }
 
   .header-inner {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     gap: 14px;
     padding-block: 14px;
@@ -676,6 +698,14 @@ h2 {
 
   .header-button {
     width: 100%;
+  }
+
+  .brand-logo {
+    width: 172px;
+  }
+
+  .footer-logo {
+    width: 176px;
   }
 
   .hero {
