@@ -186,6 +186,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 38%;
 }
 
 .hero-overlay {
@@ -724,16 +725,18 @@ h2 {
   .header-inner {
     align-items: center;
     flex-direction: column;
-    gap: 14px;
-    padding-block: 14px;
+    gap: 8px;
+    padding-block: 8px 12px;
   }
 
   .header-button {
     width: 100%;
+    min-height: 44px;
+    padding-block: 12px;
   }
 
   .brand-logo {
-    width: 172px;
+    width: 154px;
   }
 
   .footer-logo {
@@ -755,16 +758,32 @@ h2 {
   }
 
   .hero {
-    min-height: 760px;
+    min-height: 720px;
   }
 
   .hero-content {
-    min-height: 760px;
-    padding-block: 104px 56px;
+    min-height: 720px;
+    justify-content: flex-end;
+    padding-block: 320px 48px;
   }
 
-  .hero-media {
-    background-position: 62% center;
+  .hero-image {
+    object-position: 69% center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(180deg, rgba(7, 6, 4, .2), rgba(7, 6, 4, .42) 34%, rgba(7, 6, 4, .94) 78%),
+      linear-gradient(90deg, rgba(7, 6, 4, .76), rgba(7, 6, 4, .34) 52%, rgba(7, 6, 4, .08));
+  }
+
+  .hero h1 {
+    font-size: clamp(52px, 15vw, 76px);
+    line-height: .9;
+  }
+
+  .hero-subheadline {
+    font-size: clamp(25px, 7vw, 34px);
   }
 
   .hero-actions,
