@@ -7,6 +7,7 @@
   --gold: #d4aa4d;
   --gold-bright: #f0cf7b;
   --bronze: #93642f;
+  --bronze-deep: #6f451b;
   --red: #6e1717;
   --red-deep: #3a0b0b;
   --ink: #17110b;
@@ -88,13 +89,13 @@ a {
 .brand-logo {
   width: clamp(154px, 15vw, 210px);
   height: auto;
-  margin: -58px 0 -60px;
+  margin: -58px 0;
 }
 
 .footer-logo {
   width: 198px;
   height: auto;
-  margin: -58px auto -50px;
+  margin: -58px auto;
 }
 
 .site-footer strong {
@@ -106,17 +107,6 @@ a {
 .site-footer strong span,
 .hero h1 span {
   color: var(--gold);
-}
-
-.brand-subtitle {
-  display: block;
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .16em;
-  text-align: center;
-  text-transform: uppercase;
-  width: 100%;
 }
 
 .main-nav {
@@ -189,16 +179,20 @@ a {
 
 .hero-media {
   z-index: -3;
-  background:
-    linear-gradient(135deg, rgba(242, 234, 220, .08), transparent 28%),
-    linear-gradient(90deg, rgba(7, 6, 4, .9), rgba(7, 6, 4, .56) 43%, rgba(7, 6, 4, .16)),
-    url("/assets/hero-atelier.webp") center / cover,
-    linear-gradient(135deg, #0d0a07, #2a1711 54%, #080604);
+  background: linear-gradient(135deg, #0d0a07, #2a1711 54%, #080604);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-overlay {
   z-index: -2;
   background:
+    linear-gradient(135deg, rgba(242, 234, 220, .08), transparent 28%),
+    linear-gradient(90deg, rgba(7, 6, 4, .9), rgba(7, 6, 4, .56) 43%, rgba(7, 6, 4, .16)),
     linear-gradient(180deg, rgba(7, 6, 4, .18), rgba(7, 6, 4, .84)),
     radial-gradient(circle at 72% 45%, rgba(212, 170, 77, .18), transparent 24%);
 }
@@ -273,6 +267,10 @@ section {
   color: var(--ink);
 }
 
+.section-ivory .section-kicker {
+  color: var(--bronze-deep);
+}
+
 h2 {
   margin: 0;
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
@@ -332,8 +330,14 @@ h2 {
 }
 
 .trust-points span,
-.service-mark,
 .process-list span {
+  display: inline-block;
+  color: var(--bronze-deep);
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 14px;
+}
+
+.service-mark {
   display: inline-block;
   color: var(--gold);
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
@@ -647,6 +651,34 @@ h2 {
   line-height: 1.6;
 }
 
+.footer-resources {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  margin-top: 34px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(212, 170, 77, .18);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.footer-resources span {
+  margin: 0;
+  color: var(--gold);
+}
+
+.footer-resources a {
+  text-decoration: underline;
+  text-decoration-color: rgba(212, 170, 77, .45);
+  text-underline-offset: 4px;
+}
+
+.footer-resources a:hover,
+.footer-resources a:focus-visible {
+  color: var(--gold-bright);
+}
+
 @media (max-width: 1080px) {
   .process-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -706,6 +738,20 @@ h2 {
 
   .footer-logo {
     width: 176px;
+  }
+
+  .services-section {
+    background:
+      linear-gradient(180deg, rgba(18, 16, 13, .9), rgba(7, 6, 4, .98)),
+      url("/assets/responsive/costureira-trabalhando-768.webp") center / cover,
+      var(--black-soft);
+  }
+
+  .final-cta {
+    background:
+      linear-gradient(180deg, rgba(7, 6, 4, .78), rgba(7, 6, 4, .96)),
+      url("/assets/responsive/hero-atelier-768.webp") center / cover,
+      var(--black);
   }
 
   .hero {
