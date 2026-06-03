@@ -3,582 +3,131 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ventos & Aços | Roupas de Candomblé em Salvador</title>
-  <meta name="description" content="Ateliê de roupas de Candomblé em Salvador. Roupas de santo, saias, batas, panos da costa, torços, ajustes e encomendas sob medida.">
-  <style>
-    :root {
-      --bg: #0f0d0b;
-      --surface: #17120f;
-      --card: #211913;
-      --text: #fff7ea;
-      --muted: #cbbba7;
-      --gold: #c9983f;
-      --red: #a83228;
-      --line: rgba(255,255,255,.12);
-      --white: #ffffff;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .container {
-      width: min(1120px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(15,13,11,.88);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 900;
-      letter-spacing: -.03em;
-    }
-
-    .logo span { color: var(--gold); }
-
-    .nav-links {
-      display: flex;
-      gap: 22px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 20px;
-      border-radius: 999px;
-      background: var(--gold);
-      color: #1a1209;
-      font-weight: 800;
-      border: 0;
-    }
-
-    .btn.secondary {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--line);
-    }
-
-    .hero {
-      padding: 76px 0 54px;
-      background:
-        radial-gradient(circle at 20% 10%, rgba(201,152,63,.22), transparent 28%),
-        radial-gradient(circle at 80% 20%, rgba(168,50,40,.22), transparent 26%);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 44px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(201,152,63,.12);
-      color: var(--gold);
-      font-weight: 800;
-      font-size: 14px;
-      margin-bottom: 18px;
-      border: 1px solid rgba(201,152,63,.26);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(40px, 7vw, 76px);
-      line-height: .94;
-      letter-spacing: -.06em;
-    }
-
-    .lead {
-      margin: 24px 0 0;
-      color: var(--muted);
-      font-size: 19px;
-      line-height: 1.7;
-      max-width: 650px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
-    }
-
-    .hero-art {
-      min-height: 520px;
-      border-radius: 34px;
-      background:
-        linear-gradient(to bottom, rgba(0,0,0,.08), rgba(0,0,0,.68)),
-        url('https://images.unsplash.com/photo-1603400521630-9f2de124b33b?auto=format&fit=crop&w=1200&q=80') center/cover;
-      border: 1px solid var(--line);
-      box-shadow: 0 28px 80px rgba(0,0,0,.35);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .badge {
-      position: absolute;
-      left: 22px;
-      right: 22px;
-      bottom: 22px;
-      padding: 20px;
-      border-radius: 24px;
-      background: rgba(15,13,11,.78);
-      border: 1px solid rgba(255,255,255,.14);
-      backdrop-filter: blur(12px);
-    }
-
-    .badge strong {
-      display: block;
-      font-size: 18px;
-      margin-bottom: 6px;
-    }
-
-    .badge p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.55;
-      font-size: 14px;
-    }
-
-    section { padding: 58px 0; }
-
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 24px;
-      margin-bottom: 26px;
-    }
-
-    h2 {
-      margin: 0;
-      font-size: clamp(30px, 4vw, 48px);
-      letter-spacing: -.05em;
-    }
-
-    .section-head p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.65;
-      max-width: 480px;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 26px;
-      padding: 26px;
-    }
-
-    .num {
-      width: 42px;
-      height: 42px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      background: rgba(201,152,63,.13);
-      color: var(--gold);
-      font-weight: 900;
-      margin-bottom: 18px;
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 21px;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 15px;
-    }
-
-    .story {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 18px;
-      align-items: stretch;
-    }
-
-    .story-box {
-      background: linear-gradient(135deg, rgba(201,152,63,.14), rgba(168,50,40,.12));
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      padding: 34px;
-    }
-
-    .story-box p {
-      color: var(--muted);
-      line-height: 1.8;
-      font-size: 17px;
-    }
-
-    .symbol-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .symbol {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 26px;
-      padding: 26px;
-    }
-
-    .symbol strong {
-      display: block;
-      color: var(--gold);
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 16px;
-    }
-
-    .photo {
-      min-height: 350px;
-      border-radius: 30px;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--line);
-    }
-
-    .photo.small { min-height: 260px; }
-
-    .photo span {
-      position: absolute;
-      left: 18px;
-      bottom: 18px;
-      padding: 9px 13px;
-      background: rgba(15,13,11,.78);
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 999px;
-      color: var(--text);
-      font-weight: 800;
-      font-size: 13px;
-    }
-
-    .stack {
-      display: grid;
-      gap: 16px;
-    }
-
-    .process {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .step {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 22px;
-    }
-
-    .step span {
-      color: var(--gold);
-      font-weight: 900;
-      font-size: 13px;
-    }
-
-    .step h3 {
-      margin: 10px 0 8px;
-      font-size: 18px;
-    }
-
-    .step p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.55;
-      font-size: 14px;
-    }
-
-    .cta {
-      background:
-        linear-gradient(135deg, rgba(201,152,63,.22), rgba(168,50,40,.20)),
-        var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 34px;
-      padding: 42px;
-      display: flex;
-      justify-content: space-between;
-      gap: 28px;
-      align-items: center;
-    }
-
-    .cta p {
-      margin: 12px 0 0;
-      color: var(--muted);
-      line-height: 1.65;
-      max-width: 660px;
-    }
-
-    footer {
-      padding: 30px 0 44px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    @media (max-width: 880px) {
-      .nav-links { display: none; }
-
-      .hero-grid,
-      .story,
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .services,
-      .process,
-      .symbol-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-art { min-height: 390px; }
-
-      .section-head,
-      .cta {
-        display: block;
-      }
-
-      .section-head p { margin-top: 12px; }
-
-      .cta .btn { margin-top: 22px; }
-    }
-  </style>
+  <title>Ventos & Aços | Ateliê de Roupas de Candomblé</title>
+  <meta name="description" content="Ateliê de roupas de Candomblé em Salvador. Roupas de santo, saias, batas, panos da costa, torços e encomendas.">
+  <link rel="stylesheet" href="/style.css">
 </head>
-
 <body>
-  <header>
-    <div class="container nav">
-      <a class="logo" href="#">Ventos <span>&</span> Aços</a>
-      <nav class="nav-links">
-        <a href="#servicos">Serviços</a>
-        <a href="#significado">Significado</a>
-        <a href="#encomendas">Encomendas</a>
-      </nav>
-      <a class="btn" href="https://wa.me/557191421460">WhatsApp</a>
+
+<header class="header">
+  <div class="container nav">
+    <div>
+      <div class="logo">Ventos <span>&</span> Aços</div>
+      <small>ATELIÊ DE ROUPAS DE CANDOMBLÉ</small>
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Ateliê de roupas de Candomblé em Salvador</div>
-          <h1>Roupas religiosas feitas com respeito, tradição e acabamento.</h1>
-          <p class="lead">
-            Criação, ajustes e encomendas de roupas de Candomblé: roupas de santo,
-            saias, batas, panos da costa, torços e acessórios para festas, obrigações
-            e uso ritual.
-          </p>
-          <div class="actions">
-            <a class="btn" href="https://wa.me/557191421460">Pedir orçamento pelo WhatsApp</a>
-            <a class="btn secondary" href="#servicos">Ver serviços</a>
-          </div>
-        </div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#pecas">Peças</a>
+      <a href="#contato">Contato</a>
+    </nav>
 
-        <div class="hero-art">
-          <div class="badge">
-            <strong>Ventos & Aços</strong>
-            <p>Nome inspirado na força dos ventos de Iansã e no caminho do ferro de Ogum.</p>
-          </div>
-        </div>
+    <a class="btn gold" href="https://wa.me/557191421460">WhatsApp</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Ventos <span>&</span> Aços</h1>
+        <p class="tagline">ATELIÊ DE ROUPAS DE CANDOMBLÉ EM SALVADOR</p>
+        <p class="lead">
+          Roupas de santo feitas com respeito, tradição e acabamento.
+          Cada peça é criada para honrar o axé e a identidade de cada orixá.
+        </p>
+        <a class="btn gold" href="https://wa.me/557191421460">Pedir orçamento</a>
+        <p class="phone">+55 71 9142-1460</p>
       </div>
-    </section>
 
-    <section id="servicos">
-      <div class="container">
-        <div class="section-head">
-          <h2>Serviços do ateliê</h2>
-          <p>Produção sob encomenda e ajustes para quem busca roupa religiosa com presença, cuidado e respeito.</p>
-        </div>
-
-        <div class="services">
-          <article class="card">
-            <div class="num">01</div>
-            <h3>Roupas de santo</h3>
-            <p>Peças feitas sob medida conforme necessidade, ocasião e orientação da casa.</p>
-          </article>
-
-          <article class="card">
-            <div class="num">02</div>
-            <h3>Saias e batas</h3>
-            <p>Modelos para uso religioso, festas, obrigações e apresentações culturais.</p>
-          </article>
-
-          <article class="card">
-            <div class="num">03</div>
-            <h3>Panos da costa</h3>
-            <p>Confecção e ajustes com atenção ao tecido, caimento e acabamento.</p>
-          </article>
-
-          <article class="card">
-            <div class="num">04</div>
-            <h3>Torços e acessórios</h3>
-            <p>Peças complementares para compor o conjunto com harmonia visual.</p>
-          </article>
-
-          <article class="card">
-            <div class="num">05</div>
-            <h3>Ajustes e reformas</h3>
-            <p>Correções, reparos e adaptações em roupas religiosas já existentes.</p>
-          </article>
-
-          <article class="card">
-            <div class="num">06</div>
-            <h3>Encomendas especiais</h3>
-            <p>Produção para festas, saídas, obrigações e datas importantes do terreiro.</p>
-          </article>
-        </div>
+      <div class="hero-image">
+        <div class="symbol">⚔︎</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="significado">
-      <div class="container story">
-        <div class="story-box">
-          <h2>Um nome com fundamento simbólico.</h2>
-          <p>
-            Ventos & Aços nasce como referência à força de Iansã e Ogum:
-            movimento, coragem, trabalho, caminho e proteção. O ateliê une
-            estética, respeito e cuidado para vestir a tradição com dignidade.
-          </p>
-        </div>
-
-        <div class="symbol-grid">
-          <div class="symbol">
-            <strong>Ventos</strong>
-            <p>Referência à força, movimento e presença de Iansã.</p>
-          </div>
-          <div class="symbol">
-            <strong>Aços</strong>
-            <p>Referência ao ferro, ao trabalho e aos caminhos de Ogum.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="galeria">
-      <div class="container">
-        <div class="section-head">
-          <h2>Inspiração visual</h2>
-          <p>Imagens provisórias. Depois substituímos por fotos reais das peças, tecidos, detalhes e trabalhos entregues.</p>
-        </div>
-
-        <div class="gallery">
-          <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&w=1200&q=80')">
-            <span>Peças sob medida</span>
-          </div>
-
-          <div class="stack">
-            <div class="photo small" style="background-image:url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=900&q=80')">
-              <span>Tecidos e acabamento</span>
-            </div>
-            <div class="photo small" style="background-image:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80')">
-              <span>Detalhes da costura</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="encomendas">
-      <div class="container">
-        <div class="section-head">
-          <h2>Como pedir orçamento</h2>
-          <p>O atendimento inicial é feito pelo WhatsApp para entender a peça, o prazo e a necessidade.</p>
-        </div>
-
-        <div class="process">
-          <div class="step">
-            <span>PASSO 1</span>
-            <h3>Envie mensagem</h3>
-            <p>Chame no WhatsApp e explique o que precisa.</p>
-          </div>
-
-          <div class="step">
-            <span>PASSO 2</span>
-            <h3>Mande referências</h3>
-            <p>Envie foto, tecido, modelo ou inspiração da roupa.</p>
-          </div>
-
-          <div class="step">
-            <span>PASSO 3</span>
-            <h3>Informe o prazo</h3>
-            <p>Diga a data da festa, obrigação ou entrega desejada.</p>
-          </div>
-
-          <div class="step">
-            <span>PASSO 4</span>
-            <h3>Receba orientação</h3>
-            <p>O ateliê responde com próximos passos e orçamento inicial.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="cta">
-          <div>
-            <h2>Quer fazer uma encomenda?</h2>
-            <p>
-              Envie uma mensagem com o tipo de peça, referência, medidas aproximadas
-              e prazo desejado.
-            </p>
-          </div>
-          <a class="btn" href="https://wa.me/557191421460">Chamar no WhatsApp</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+  <section id="servicos" class="light">
     <div class="container">
-      © 2026 Ventos & Aços — Ateliê de roupas de Candomblé em Salvador.
+      <div class="section-head">
+        <div>
+          <p class="mini">NOSSOS SERVIÇOS</p>
+          <h2>Peças criadas com respeito e dedicação</h2>
+        </div>
+        <p>
+          Trabalhamos com atenção aos detalhes para entregar roupas que carregam beleza,
+          significado e axé.
+        </p>
+      </div>
+
+      <div class="services">
+        <div class="service">👗<h3>Roupas de Santo</h3><p>Peças completas sob medida.</p></div>
+        <div class="service">▱<h3>Saias e Batas</h3><p>Modelos tradicionais e personalizados.</p></div>
+        <div class="service">▤<h3>Panos da Costa</h3><p>Diversos tecidos, tamanhos e amarrações.</p></div>
+        <div class="service">◉<h3>Torços e Acessórios</h3><p>Torços, turbantes e acessórios diversos.</p></div>
+        <div class="service">▣<h3>Ajustes e Reformas</h3><p>Ajustes, consertos e adaptações.</p></div>
+        <div class="service">◎<h3>Encomendas Especiais</h3><p>Para festas, obrigações e datas importantes.</p></div>
+      </div>
     </div>
-  </footer>
+  </section>
+
+  <section id="pecas" class="dark">
+    <div class="container">
+      <h2 class="center">Peças que vestem o axé</h2>
+
+      <div class="gallery">
+        <div class="photo p1"></div>
+        <div class="photo p2"></div>
+        <div class="photo p3"></div>
+        <div class="photo p4"></div>
+        <div class="photo p5"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="light">
+    <div class="container essence">
+      <div>
+        <p class="mini">NOSSA ESSÊNCIA</p>
+        <h2>Ventos de Iansã,<br>Aços de Ogum</h2>
+        <p>
+          Nosso nome carrega a força dos ventos de Iansã e a firmeza do aço de Ogum.
+          Unimos movimento, proteção, beleza e resistência em cada criação.
+        </p>
+      </div>
+
+      <div class="essence-image ritual"></div>
+
+      <div class="values">
+        <div><strong>Respeito à tradição</strong><p>Cada peça é feita com cuidado e fundamento.</p></div>
+        <div><strong>Qualidade e acabamento</strong><p>Atenção aos tecidos, detalhes e caimento.</p></div>
+        <div><strong>Atendimento personalizado</strong><p>Cada cliente tem uma necessidade específica.</p></div>
+      </div>
+
+      <div class="essence-image ogum"></div>
+    </div>
+  </section>
+
+  <section id="contato" class="cta">
+    <div class="container cta-grid">
+      <h2>Vamos criar sua próxima peça?</h2>
+      <p>Fale conosco pelo WhatsApp e solicite seu orçamento.</p>
+      <a class="btn green" href="https://wa.me/557191421460">Chamar no WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>Ventos <span>&</span> Aços</strong>
+      <p>ATELIÊ DE ROUPAS DE CANDOMBLÉ</p>
+    </div>
+    <div><strong>Atendimento</strong><p>Segunda a sábado<br>8h às 18h</p></div>
+    <div><strong>WhatsApp</strong><p>+55 71 9142-1460</p></div>
+    <div><strong>Salvador - BA</strong><p>Atendimento com horário agendado</p></div>
+  </div>
+</footer>
+
 </body>
 </html>
