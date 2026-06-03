@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Costureira em Salvador | Ajustes e Consertos de Roupas</title>
-  <meta name="description" content="Ajustes, barras, consertos e pequenos reparos de roupas em Salvador. Atendimento por WhatsApp.">
-  <link rel="preconnect" href="https://images.unsplash.com">
+  <title>Ventos & Aços | Roupas de Candomblé em Salvador</title>
+  <meta name="description" content="Ateliê de roupas de Candomblé em Salvador. Roupas de santo, saias, batas, panos da costa, torços, ajustes e encomendas sob medida.">
   <style>
     :root {
-      --bg: #fbf7f0;
-      --card: #ffffff;
-      --text: #1d1a16;
-      --muted: #6f675f;
-      --brand: #8b4a2f;
-      --brand-dark: #5f2f1d;
-      --line: #eadfd2;
-      --soft: #f3e8dc;
+      --bg: #0f0d0b;
+      --surface: #17120f;
+      --card: #211913;
+      --text: #fff7ea;
+      --muted: #cbbba7;
+      --gold: #c9983f;
+      --red: #a83228;
+      --line: rgba(255,255,255,.12);
+      --white: #ffffff;
     }
 
     * { box-sizing: border-box; }
@@ -27,7 +27,7 @@
       color: var(--text);
     }
 
-    a { color: inherit; }
+    a { color: inherit; text-decoration: none; }
 
     .container {
       width: min(1120px, calc(100% - 40px));
@@ -38,7 +38,7 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(251, 247, 240, .92);
+      background: rgba(15,13,11,.88);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--line);
     }
@@ -48,54 +48,52 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
     }
 
     .logo {
-      font-weight: 800;
-      letter-spacing: -.03em;
       font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -.03em;
     }
+
+    .logo span { color: var(--gold); }
 
     .nav-links {
       display: flex;
       gap: 22px;
-      align-items: center;
-      font-size: 14px;
       color: var(--muted);
+      font-size: 14px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
       padding: 14px 20px;
       border-radius: 999px;
-      background: var(--brand);
-      color: white;
-      text-decoration: none;
-      font-weight: 700;
+      background: var(--gold);
+      color: #1a1209;
+      font-weight: 800;
       border: 0;
-      cursor: pointer;
     }
 
-    .btn:hover { background: var(--brand-dark); }
-
     .btn.secondary {
-      background: white;
+      background: transparent;
       color: var(--text);
       border: 1px solid var(--line);
     }
 
     .hero {
-      padding: 72px 0 48px;
+      padding: 76px 0 54px;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(201,152,63,.22), transparent 28%),
+        radial-gradient(circle at 80% 20%, rgba(168,50,40,.22), transparent 26%);
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1.05fr .95fr;
-      gap: 42px;
+      gap: 44px;
       align-items: center;
     }
 
@@ -103,93 +101,94 @@
       display: inline-flex;
       padding: 8px 12px;
       border-radius: 999px;
-      background: var(--soft);
-      color: var(--brand-dark);
+      background: rgba(201,152,63,.12);
+      color: var(--gold);
+      font-weight: 800;
       font-size: 14px;
-      font-weight: 700;
       margin-bottom: 18px;
+      border: 1px solid rgba(201,152,63,.26);
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(38px, 6vw, 68px);
-      line-height: .96;
+      font-size: clamp(40px, 7vw, 76px);
+      line-height: .94;
       letter-spacing: -.06em;
     }
 
     .lead {
-      margin: 22px 0 0;
+      margin: 24px 0 0;
       color: var(--muted);
       font-size: 19px;
-      line-height: 1.65;
-      max-width: 620px;
+      line-height: 1.7;
+      max-width: 650px;
     }
 
-    .hero-actions {
+    .actions {
       display: flex;
-      gap: 12px;
       flex-wrap: wrap;
-      margin-top: 28px;
+      gap: 12px;
+      margin-top: 30px;
     }
 
-    .hero-image {
-      min-height: 500px;
-      border-radius: 32px;
+    .hero-art {
+      min-height: 520px;
+      border-radius: 34px;
       background:
-        linear-gradient(to bottom, rgba(0,0,0,.05), rgba(0,0,0,.35)),
-        url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80') center/cover;
-      box-shadow: 0 24px 70px rgba(85, 54, 35, .20);
+        linear-gradient(to bottom, rgba(0,0,0,.08), rgba(0,0,0,.68)),
+        url('https://images.unsplash.com/photo-1603400521630-9f2de124b33b?auto=format&fit=crop&w=1200&q=80') center/cover;
+      border: 1px solid var(--line);
+      box-shadow: 0 28px 80px rgba(0,0,0,.35);
       position: relative;
       overflow: hidden;
     }
 
-    .floating-card {
+    .badge {
       position: absolute;
       left: 22px;
       right: 22px;
       bottom: 22px;
-      background: rgba(255,255,255,.92);
-      border: 1px solid rgba(255,255,255,.6);
-      border-radius: 22px;
-      padding: 18px;
-      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 24px;
+      background: rgba(15,13,11,.78);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(12px);
     }
 
-    .floating-card strong {
+    .badge strong {
       display: block;
       font-size: 18px;
       margin-bottom: 6px;
     }
 
-    .floating-card span {
+    .badge p {
+      margin: 0;
       color: var(--muted);
+      line-height: 1.55;
       font-size: 14px;
-      line-height: 1.5;
     }
 
-    section {
-      padding: 54px 0;
-    }
+    section { padding: 58px 0; }
 
-    .section-title {
+    .section-head {
       display: flex;
       justify-content: space-between;
-      gap: 24px;
       align-items: end;
-      margin-bottom: 24px;
+      gap: 24px;
+      margin-bottom: 26px;
     }
 
     h2 {
       margin: 0;
-      font-size: clamp(30px, 4vw, 44px);
-      letter-spacing: -.04em;
+      font-size: clamp(30px, 4vw, 48px);
+      letter-spacing: -.05em;
     }
 
-    .section-title p {
+    .section-head p {
       margin: 0;
       color: var(--muted);
-      max-width: 460px;
-      line-height: 1.6;
+      line-height: 1.65;
+      max-width: 480px;
     }
 
     .services {
@@ -198,62 +197,105 @@
       gap: 16px;
     }
 
-    .service-card {
+    .card {
       background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 24px;
+      border-radius: 26px;
+      padding: 26px;
     }
 
-    .service-card .icon {
+    .num {
       width: 42px;
       height: 42px;
-      border-radius: 14px;
+      border-radius: 16px;
       display: grid;
       place-items: center;
-      background: var(--soft);
-      color: var(--brand-dark);
+      background: rgba(201,152,63,.13);
+      color: var(--gold);
       font-weight: 900;
       margin-bottom: 18px;
     }
 
-    .service-card h3 {
-      margin: 0 0 8px;
-      font-size: 20px;
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 21px;
     }
 
-    .service-card p {
+    .card p {
       margin: 0;
       color: var(--muted);
-      line-height: 1.55;
+      line-height: 1.6;
       font-size: 15px;
+    }
+
+    .story {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .story-box {
+      background: linear-gradient(135deg, rgba(201,152,63,.14), rgba(168,50,40,.12));
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 34px;
+    }
+
+    .story-box p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .symbol-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .symbol {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 26px;
+    }
+
+    .symbol strong {
+      display: block;
+      color: var(--gold);
+      font-size: 22px;
+      margin-bottom: 10px;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: 1.1fr .9fr;
+      grid-template-columns: 1.15fr .85fr;
       gap: 16px;
     }
 
     .photo {
-      min-height: 340px;
-      border-radius: 28px;
+      min-height: 350px;
+      border-radius: 30px;
       background-size: cover;
       background-position: center;
-      overflow: hidden;
       position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
     }
 
-    .photo.small { min-height: 250px; }
+    .photo.small { min-height: 260px; }
 
     .photo span {
       position: absolute;
       left: 18px;
       bottom: 18px;
-      padding: 8px 12px;
-      background: rgba(255,255,255,.9);
+      padding: 9px 13px;
+      background: rgba(15,13,11,.78);
+      border: 1px solid rgba(255,255,255,.16);
       border-radius: 999px;
-      font-weight: 700;
+      color: var(--text);
+      font-weight: 800;
       font-size: 13px;
     }
 
@@ -262,127 +304,88 @@
       gap: 16px;
     }
 
-    .reviews {
+    .process {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
     }
 
-    .review {
-      background: white;
+    .step {
+      background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 24px;
-      padding: 24px;
+      padding: 22px;
     }
 
-    .stars {
-      color: #b7791f;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
+    .step span {
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 13px;
     }
 
-    .review p {
+    .step h3 {
+      margin: 10px 0 8px;
+      font-size: 18px;
+    }
+
+    .step p {
+      margin: 0;
       color: var(--muted);
-      line-height: 1.6;
-      margin: 0 0 14px;
-    }
-
-    .review strong { font-size: 14px; }
-
-    .location {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 18px;
-      align-items: stretch;
-    }
-
-    .info-box {
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 28px;
-    }
-
-    .info-row {
-      padding: 16px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .info-row:last-child { border-bottom: 0; }
-
-    .info-row span {
-      display: block;
-      color: var(--muted);
+      line-height: 1.55;
       font-size: 14px;
-      margin-bottom: 4px;
-    }
-
-    .info-row strong { font-size: 17px; }
-
-    .map-placeholder {
-      min-height: 360px;
-      border-radius: 28px;
-      background:
-        linear-gradient(135deg, rgba(139,74,47,.18), rgba(95,47,29,.05)),
-        repeating-linear-gradient(45deg, transparent 0 18px, rgba(139,74,47,.08) 18px 19px);
-      border: 1px solid var(--line);
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 30px;
-      color: var(--brand-dark);
-      font-weight: 800;
     }
 
     .cta {
-      background: var(--brand-dark);
-      color: white;
-      border-radius: 32px;
+      background:
+        linear-gradient(135deg, rgba(201,152,63,.22), rgba(168,50,40,.20)),
+        var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 34px;
       padding: 42px;
       display: flex;
       justify-content: space-between;
-      gap: 24px;
+      gap: 28px;
       align-items: center;
     }
 
-    .cta h2 { color: white; }
-
     .cta p {
-      color: rgba(255,255,255,.78);
       margin: 12px 0 0;
-      line-height: 1.6;
+      color: var(--muted);
+      line-height: 1.65;
+      max-width: 660px;
     }
 
     footer {
-      padding: 28px 0 42px;
+      padding: 30px 0 44px;
       color: var(--muted);
       font-size: 14px;
     }
 
-    @media (max-width: 860px) {
+    @media (max-width: 880px) {
       .nav-links { display: none; }
+
       .hero-grid,
-      .gallery,
-      .location {
+      .story,
+      .gallery {
         grid-template-columns: 1fr;
       }
+
       .services,
-      .reviews {
+      .process,
+      .symbol-grid {
         grid-template-columns: 1fr;
       }
-      .hero-image { min-height: 380px; }
-      .section-title {
-        display: block;
-      }
-      .section-title p {
-        margin-top: 12px;
-      }
+
+      .hero-art { min-height: 390px; }
+
+      .section-head,
       .cta {
         display: block;
       }
-      .cta .btn {
-        margin-top: 22px;
-      }
+
+      .section-head p { margin-top: 12px; }
+
+      .cta .btn { margin-top: 22px; }
     }
   </style>
 </head>
@@ -390,13 +393,13 @@
 <body>
   <header>
     <div class="container nav">
-      <div class="logo">Ateliê da Costura</div>
+      <a class="logo" href="#">Ventos <span>&</span> Aços</a>
       <nav class="nav-links">
         <a href="#servicos">Serviços</a>
-        <a href="#galeria">Antes e depois</a>
-        <a href="#localizacao">Localização</a>
+        <a href="#significado">Significado</a>
+        <a href="#encomendas">Encomendas</a>
       </nav>
-      <a class="btn" href="https://wa.me/5500000000000">WhatsApp</a>
+      <a class="btn" href="https://wa.me/557191421460">WhatsApp</a>
     </div>
   </header>
 
@@ -404,22 +407,23 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Costureira em Salvador</div>
-          <h1>Ajustes e consertos de roupas com atendimento pelo WhatsApp.</h1>
+          <div class="eyebrow">Ateliê de roupas de Candomblé em Salvador</div>
+          <h1>Roupas religiosas feitas com respeito, tradição e acabamento.</h1>
           <p class="lead">
-            Fazemos barras, ajustes, troca de zíper, pequenos reparos e reformas de peças.
-            Envie uma foto da roupa pelo WhatsApp para receber uma orientação inicial.
+            Criação, ajustes e encomendas de roupas de Candomblé: roupas de santo,
+            saias, batas, panos da costa, torços e acessórios para festas, obrigações
+            e uso ritual.
           </p>
-          <div class="hero-actions">
-            <a class="btn" href="https://wa.me/5500000000000">Pedir orçamento</a>
+          <div class="actions">
+            <a class="btn" href="https://wa.me/557191421460">Pedir orçamento pelo WhatsApp</a>
             <a class="btn secondary" href="#servicos">Ver serviços</a>
           </div>
         </div>
 
-        <div class="hero-image">
-          <div class="floating-card">
-            <strong>Atendimento prático e direto</strong>
-            <span>Envie foto da peça, tipo de ajuste desejado e prazo. Respondemos pelo WhatsApp.</span>
+        <div class="hero-art">
+          <div class="badge">
+            <strong>Ventos & Aços</strong>
+            <p>Nome inspirado na força dos ventos de Iansã e no caminho do ferro de Ogum.</p>
           </div>
         </div>
       </div>
@@ -427,132 +431,130 @@
 
     <section id="servicos">
       <div class="container">
-        <div class="section-title">
-          <h2>Serviços mais pedidos</h2>
-          <p>Uma estrutura simples para o cliente entender rapidamente o que a costureira faz e chamar no WhatsApp.</p>
+        <div class="section-head">
+          <h2>Serviços do ateliê</h2>
+          <p>Produção sob encomenda e ajustes para quem busca roupa religiosa com presença, cuidado e respeito.</p>
         </div>
 
         <div class="services">
-          <article class="service-card">
-            <div class="icon">01</div>
-            <h3>Barra de calça</h3>
-            <p>Ajuste de comprimento para calças jeans, social e outras peças.</p>
+          <article class="card">
+            <div class="num">01</div>
+            <h3>Roupas de santo</h3>
+            <p>Peças feitas sob medida conforme necessidade, ocasião e orientação da casa.</p>
           </article>
 
-          <article class="service-card">
-            <div class="icon">02</div>
-            <h3>Ajuste de vestido</h3>
-            <p>Pequenos ajustes, redução, acerto de caimento e reparos.</p>
+          <article class="card">
+            <div class="num">02</div>
+            <h3>Saias e batas</h3>
+            <p>Modelos para uso religioso, festas, obrigações e apresentações culturais.</p>
           </article>
 
-          <article class="service-card">
-            <div class="icon">03</div>
-            <h3>Troca de zíper</h3>
-            <p>Substituição de zíper em calças, saias, vestidos e jaquetas.</p>
+          <article class="card">
+            <div class="num">03</div>
+            <h3>Panos da costa</h3>
+            <p>Confecção e ajustes com atenção ao tecido, caimento e acabamento.</p>
           </article>
 
-          <article class="service-card">
-            <div class="icon">04</div>
-            <h3>Ajuste de camisa</h3>
-            <p>Ajustes simples para melhorar caimento e acabamento da peça.</p>
+          <article class="card">
+            <div class="num">04</div>
+            <h3>Torços e acessórios</h3>
+            <p>Peças complementares para compor o conjunto com harmonia visual.</p>
           </article>
 
-          <article class="service-card">
-            <div class="icon">05</div>
-            <h3>Reparos em roupas</h3>
-            <p>Consertos de costura, pequenos rasgos e reforços de acabamento.</p>
+          <article class="card">
+            <div class="num">05</div>
+            <h3>Ajustes e reformas</h3>
+            <p>Correções, reparos e adaptações em roupas religiosas já existentes.</p>
           </article>
 
-          <article class="service-card">
-            <div class="icon">06</div>
-            <h3>Reformas de peças</h3>
-            <p>Transformações simples para reaproveitar roupas paradas no armário.</p>
+          <article class="card">
+            <div class="num">06</div>
+            <h3>Encomendas especiais</h3>
+            <p>Produção para festas, saídas, obrigações e datas importantes do terreiro.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="significado">
+      <div class="container story">
+        <div class="story-box">
+          <h2>Um nome com fundamento simbólico.</h2>
+          <p>
+            Ventos & Aços nasce como referência à força de Iansã e Ogum:
+            movimento, coragem, trabalho, caminho e proteção. O ateliê une
+            estética, respeito e cuidado para vestir a tradição com dignidade.
+          </p>
+        </div>
+
+        <div class="symbol-grid">
+          <div class="symbol">
+            <strong>Ventos</strong>
+            <p>Referência à força, movimento e presença de Iansã.</p>
+          </div>
+          <div class="symbol">
+            <strong>Aços</strong>
+            <p>Referência ao ferro, ao trabalho e aos caminhos de Ogum.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="galeria">
       <div class="container">
-        <div class="section-title">
-          <h2>Antes e depois</h2>
-          <p>Placeholder visual. Depois substituímos por fotos reais da loja, das peças e dos trabalhos finalizados.</p>
+        <div class="section-head">
+          <h2>Inspiração visual</h2>
+          <p>Imagens provisórias. Depois substituímos por fotos reais das peças, tecidos, detalhes e trabalhos entregues.</p>
         </div>
 
         <div class="gallery">
-          <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80')">
-            <span>Ajuste de caimento</span>
+          <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&w=1200&q=80')">
+            <span>Peças sob medida</span>
           </div>
 
           <div class="stack">
+            <div class="photo small" style="background-image:url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=900&q=80')">
+              <span>Tecidos e acabamento</span>
+            </div>
             <div class="photo small" style="background-image:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80')">
-              <span>Reparo de peça</span>
-            </div>
-            <div class="photo small" style="background-image:url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80')">
-              <span>Acabamento</span>
+              <span>Detalhes da costura</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="avaliacoes">
+    <section id="encomendas">
       <div class="container">
-        <div class="section-title">
-          <h2>Avaliações</h2>
-          <p>Depois vamos ligar isso ao link de avaliações do Google Business Profile.</p>
+        <div class="section-head">
+          <h2>Como pedir orçamento</h2>
+          <p>O atendimento inicial é feito pelo WhatsApp para entender a peça, o prazo e a necessidade.</p>
         </div>
 
-        <div class="reviews">
-          <article class="review">
-            <div class="stars">★★★★★</div>
-            <p>Atendimento rápido e serviço bem feito. A roupa ficou com ótimo caimento.</p>
-            <strong>Cliente local</strong>
-          </article>
-
-          <article class="review">
-            <div class="stars">★★★★★</div>
-            <p>Consegui falar pelo WhatsApp e resolver o ajuste sem complicação.</p>
-            <strong>Cliente local</strong>
-          </article>
-
-          <article class="review">
-            <div class="stars">★★★★★</div>
-            <p>Boa comunicação, prazo claro e acabamento caprichado.</p>
-            <strong>Cliente local</strong>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="localizacao">
-      <div class="container location">
-        <div class="info-box">
-          <h2>Localização</h2>
-
-          <div class="info-row">
-            <span>Bairro</span>
-            <strong>Salvador - BA</strong>
+        <div class="process">
+          <div class="step">
+            <span>PASSO 1</span>
+            <h3>Envie mensagem</h3>
+            <p>Chame no WhatsApp e explique o que precisa.</p>
           </div>
 
-          <div class="info-row">
-            <span>Atendimento</span>
-            <strong>Por WhatsApp e presencial com horário combinado</strong>
+          <div class="step">
+            <span>PASSO 2</span>
+            <h3>Mande referências</h3>
+            <p>Envie foto, tecido, modelo ou inspiração da roupa.</p>
           </div>
 
-          <div class="info-row">
-            <span>Horário</span>
-            <strong>Segunda a sexta, horário comercial</strong>
+          <div class="step">
+            <span>PASSO 3</span>
+            <h3>Informe o prazo</h3>
+            <p>Diga a data da festa, obrigação ou entrega desejada.</p>
           </div>
 
-          <div class="hero-actions">
-            <a class="btn" href="https://wa.me/5500000000000">Chamar no WhatsApp</a>
+          <div class="step">
+            <span>PASSO 4</span>
+            <h3>Receba orientação</h3>
+            <p>O ateliê responde com próximos passos e orçamento inicial.</p>
           </div>
-        </div>
-
-        <div class="map-placeholder">
-          Google Maps placeholder<br>
-          Depois colocamos o endereço real ou link do perfil no Google.
         </div>
       </div>
     </section>
@@ -561,10 +563,13 @@
       <div class="container">
         <div class="cta">
           <div>
-            <h2>Precisa ajustar uma roupa?</h2>
-            <p>Envie uma foto da peça pelo WhatsApp e informe o tipo de ajuste desejado.</p>
+            <h2>Quer fazer uma encomenda?</h2>
+            <p>
+              Envie uma mensagem com o tipo de peça, referência, medidas aproximadas
+              e prazo desejado.
+            </p>
           </div>
-          <a class="btn secondary" href="https://wa.me/5500000000000">Pedir orçamento agora</a>
+          <a class="btn" href="https://wa.me/557191421460">Chamar no WhatsApp</a>
         </div>
       </div>
     </section>
@@ -572,7 +577,7 @@
 
   <footer>
     <div class="container">
-      © 2026 Ateliê da Costura. Site piloto por Ravi Dulundu.
+      © 2026 Ventos & Aços — Ateliê de roupas de Candomblé em Salvador.
     </div>
   </footer>
 </body>
