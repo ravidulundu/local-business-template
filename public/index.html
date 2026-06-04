@@ -435,5 +435,38 @@
       <p>© 2026 Ventos &amp; Aços. Todos os direitos reservados. Site por <a href="https://dulundu.dev" target="_blank" rel="noopener">dulundu.dev</a>.</p>
     </div>
   </footer>
+
+  <a class="back-to-top" href="#top" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6"/>
+    </svg>
+  </a>
+  <script>
+    (() => {
+      const button = document.querySelector('.back-to-top');
+      const footer = document.querySelector('.site-footer');
+
+      if (!button || !footer) {
+        return;
+      }
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          button.classList.toggle('is-visible', entries.some((entry) => entry.isIntersecting));
+        }, { rootMargin: '0px 0px 320px 0px' });
+
+        observer.observe(footer);
+        return;
+      }
+
+      const toggleButton = () => {
+        const distanceToEnd = document.documentElement.scrollHeight - window.innerHeight - window.scrollY;
+        button.classList.toggle('is-visible', distanceToEnd < 700);
+      };
+
+      window.addEventListener('scroll', toggleButton, { passive: true });
+      toggleButton();
+    })();
+  </script>
 </body>
 </html>

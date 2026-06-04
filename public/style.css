@@ -752,6 +752,45 @@ h2 {
   font-size: 12px;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(212, 170, 77, .5);
+  border-radius: 50%;
+  color: var(--black);
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold) 55%, var(--bronze));
+  box-shadow: 0 16px 42px rgba(0, 0, 0, .34);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(14px);
+  transition: opacity .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 52px rgba(0, 0, 0, .42);
+}
+
+.back-to-top svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+}
+
 @media (max-width: 1080px) {
   .process-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -826,6 +865,13 @@ h2 {
 
   .footer-logo {
     width: 188px;
+  }
+
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 42px;
+    height: 42px;
   }
 
   .services-section {
