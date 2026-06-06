@@ -41,7 +41,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .button-gold { color: #211408; background: linear-gradient(135deg, var(--gold-light), var(--gold) 58%, #95672e); box-shadow: 0 15px 38px rgba(200, 155, 67, .22); }
 .button-dark { color: var(--ivory); background: var(--ink); }
 
-.hero { position: relative; min-height: 0; aspect-ratio: 1807 / 870; display: grid; align-items: center; isolation: isolate; overflow: hidden; }
+.hero { position: relative; height: clamp(620px, 72vh, 760px); height: clamp(620px, 72svh, 760px); display: grid; align-items: center; isolation: isolate; overflow: hidden; }
 .hero-picture, .hero-image, .hero-shade { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero-picture { z-index: -2; }
 .hero-image { z-index: -2; top: 0; height: 100%; object-fit: cover; object-position: center; }
