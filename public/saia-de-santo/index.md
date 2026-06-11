@@ -8,6 +8,12 @@ Cada saia é produzida por encomenda. O atendimento organiza medidas, referênci
 
 Solicite orçamento pelo WhatsApp: [+55 71 98158-7532](https://wa.me/5571981587532).
 
+## Volume, tecido e caimento
+
+O volume resulta da combinação entre modelagem, franzido, camadas e características do tecido. A renda é escolhida considerando largura, desenho, peso e harmonia com o restante do conjunto. Para um orçamento preciso, envie referência, cores desejadas, data de uso e informações sobre o volume esperado.
+
+Conteúdo revisado pela equipe do ateliê Ventos & Aços em 11 de junho de 2026.
+
 ## Perguntas frequentes
 
 ### Posso escolher o volume da saia?

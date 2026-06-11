@@ -30,8 +30,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .site-header { position: sticky; top: 0; z-index: 30; border-bottom: 1px solid var(--line-dark); background: rgba(13, 9, 7, .94); backdrop-filter: blur(14px); }
 .header-inner { min-height: var(--header-height); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.brand { position: relative; width: 220px; height: 76px; overflow: hidden; }
-.brand img { position: absolute; top: 50%; left: 50%; width: 400px; max-width: none; height: auto; transform: translate(-50%, calc(-50% - 12px)); }
+.brand { width: 240px; height: 70px; display: block; }
+.brand img { width: 100%; height: 100%; object-fit: contain; }
 .main-nav { display: flex; align-items: center; gap: clamp(16px, 2.4vw, 30px); color: var(--ivory-deep); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .main-nav a { padding: 12px 0; }
 .main-nav a:hover { color: var(--gold-light); }
@@ -91,6 +91,11 @@ h3 { margin: 0; font-size: 25px; line-height: 1.15; }
 .service-links article:last-child { grid-column: auto; min-height: 205px; }
 .service-links .text-link { margin-top: auto; padding-top: 22px; color: var(--bronze); font-weight: 800; text-transform: uppercase; letter-spacing: .06em; font-size: 12px; }
 .service-links .text-link:hover { color: var(--red); }
+.answer-block { max-width: 920px; padding: clamp(28px, 5vw, 52px); border: 1px solid var(--line); border-left: 4px solid var(--gold); background: rgba(255,255,255,.34); }
+.answer-block h2 { max-width: 760px; margin-bottom: 22px; }
+.answer-block p { max-width: 780px; color: var(--muted); font-size: 18px; }
+.answer-block p + p { margin-top: 16px; }
+.editorial-note { margin-top: 28px; color: var(--muted); font-size: 13px; letter-spacing: .02em; }
 .contact-details { margin: 24px 0 0; padding: 0; display: grid; gap: 8px; list-style: none; color: var(--ivory-deep); }
 .service-gallery { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(320px, .85fr); grid-template-rows: repeat(2, 260px); gap: 12px; }
 .service-gallery figure { position: relative; margin: 0; overflow: hidden; background: var(--black-soft); }
@@ -131,8 +136,8 @@ h3 { margin: 0; font-size: 25px; line-height: 1.15; }
 .final-cta-inner { max-width: 860px; }
 .final-cta p { max-width: 720px; margin: 24px auto 30px; color: var(--ivory-deep); }
 .site-footer { padding-block: 30px; border-top: 1px solid var(--line-dark); background: var(--black); }
-.footer-inner { display: grid; grid-template-columns: 210px minmax(260px, 520px) 48px; align-items: center; justify-content: space-between; gap: clamp(32px, 6vw, 90px); color: var(--ivory-deep); font-size: 13px; }
-.footer-brand { width: 210px; height: 96px; display: block; flex: 0 0 auto; }
+.footer-inner { display: grid; grid-template-columns: 235px minmax(260px, 520px) 48px; align-items: center; justify-content: space-between; gap: clamp(32px, 6vw, 90px); color: var(--ivory-deep); font-size: 13px; }
+.footer-brand { width: 235px; height: 105px; display: block; flex: 0 0 auto; }
 .footer-brand img { width: 100%; height: 100%; object-fit: contain; }
 .footer-contact { margin: 0; line-height: 1.7; }
 .footer-inner a { color: var(--gold-light); font-weight: 700; }
@@ -161,8 +166,7 @@ h3 { margin: 0; font-size: 25px; line-height: 1.15; }
   :root { --header-height: 70px; }
   .container, .narrow { width: min(100% - 28px, 1160px); }
   .header-inner { gap: 12px; }
-  .brand { width: 145px; height: 58px; }
-  .brand img { width: 290px; }
+  .brand { width: 158px; height: 52px; }
   .header-cta { min-height: 42px; padding: 10px 13px; font-size: 10px; }
   .hero { min-height: 1100px; aspect-ratio: auto; background: var(--black); }
   .hero-picture { inset: 0; height: 100%; }
@@ -187,7 +191,7 @@ h3 { margin: 0; font-size: 25px; line-height: 1.15; }
   .benefits-grid { grid-template-columns: 1fr; }
   .benefits-grid li { min-height: 90px; }
   .footer-inner { display: flex; flex-direction: column; text-align: center; }
-  .footer-brand { width: 190px; height: 88px; }
+  .footer-brand { width: 205px; height: 94px; }
   .sticky-whatsapp { display: flex; }
   .back-to-top { bottom: 82px; }
   .site-footer { padding-bottom: 88px; }

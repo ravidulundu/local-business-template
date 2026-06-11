@@ -11,6 +11,12 @@ A Ventos & Aços produz roupa de santo sob medida em Salvador para obrigações,
 
 O orçamento é personalizado. Fale pelo WhatsApp: [+55 71 98158-7532](https://wa.me/5571981587532).
 
+## Medidas, tecidos e acabamento
+
+O atendimento presencial permite conferir medidas e alinhar as peças que formarão o conjunto. Tecidos, rendas e aviamentos são escolhidos de acordo com a modelagem, o caimento esperado e a finalidade informada. Provas, prazo e cuidados com a peça são combinados conforme a complexidade da encomenda.
+
+Conteúdo revisado pela equipe do ateliê Ventos & Aços em 11 de junho de 2026.
+
 ## Perguntas frequentes
 
 ### A roupa é feita sob medida?

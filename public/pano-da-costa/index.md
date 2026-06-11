@@ -8,6 +8,12 @@ Tecido, dimensão e acabamento são definidos para harmonizar o pano da costa co
 
 Solicite orçamento pelo WhatsApp: [+55 71 98158-7532](https://wa.me/5571981587532).
 
+## Tecido, proporção e acabamento
+
+A escolha considera a finalidade, as dimensões e a relação visual com saia, bata ou roupa de santo. Peso, toque, transparência e estrutura do tecido influenciam o caimento. Bordados, rendas, galões e barras são definidos para manter equilíbrio com a base e com as demais peças do conjunto.
+
+Conteúdo revisado pela equipe do ateliê Ventos & Aços em 11 de junho de 2026.
+
 ## Perguntas frequentes
 
 ### O pano da costa é feito sob medida?
