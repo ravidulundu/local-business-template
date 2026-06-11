@@ -31,10 +31,19 @@ for route in roupa-de-santo saia-de-santo pano-da-costa; do
   assert_contains "$html" '"@type":"FAQPage"'
   assert_contains "$html" "https://wa.me/$PHONE"
   assert_contains "$html" 'aria-label="Breadcrumb"'
+  assert_contains "$html" 'class="back-to-top"'
+  assert_contains "$html" 'src="/site.js"'
   for href in / /roupa-de-santo/ /saia-de-santo/ /pano-da-costa/; do
     assert_contains "$html" "href=\"$href\""
   done
 done
+
+assert_contains "$PUBLIC/index.html" 'class="back-to-top"'
+assert_contains "$PUBLIC/index.html" 'src="/site.js"'
+assert_file "$PUBLIC/site.js"
+assert_contains "$PUBLIC/site.js" 'IntersectionObserver'
+assert_contains "$PUBLIC/site.js" 'document.querySelector(".site-footer")'
+assert_contains "$PUBLIC/site.js" 'backToTop.classList.toggle("is-visible"'
 
 assert_contains "$PUBLIC/roupa-de-santo/index.html" '<title>Roupa de Santo Sob Medida em Salvador | Ventos &amp; Aços</title>'
 assert_contains "$PUBLIC/roupa-de-santo/index.html" '<h1>Roupa de Santo sob medida em Salvador</h1>'
