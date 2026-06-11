@@ -64,6 +64,11 @@ assert_contains "$PUBLIC/site.js" 'document.querySelector(".site-footer")'
 assert_contains "$PUBLIC/site.js" 'backToTop.classList.toggle("is-visible"'
 assert_contains "$PUBLIC/style.css" 'grid-template-columns: minmax(0, 1.45fr) minmax(320px, .85fr)'
 assert_contains "$PUBLIC/style.css" '.service-gallery figure:first-child { grid-row: 1 / span 2; }'
+assert_contains "$PUBLIC/style.css" '.footer-brand img { width: 100%; height: 100%; object-fit: contain; }'
+assert_file "$PUBLIC/assets/logo-footer.svg"
+if grep -Fq '.footer-brand img { position: absolute' "$PUBLIC/style.css"; then
+  fail "footer logo must not use absolute oversized cropping"
+fi
 
 assert_contains "$PUBLIC/roupa-de-santo/index.html" '<title>Roupa de Santo Sob Medida em Salvador | Ventos &amp; Aços</title>'
 assert_contains "$PUBLIC/roupa-de-santo/index.html" '<h1>Roupa de Santo sob medida em Salvador</h1>'
