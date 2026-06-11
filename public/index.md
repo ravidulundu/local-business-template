@@ -1,5 +1,11 @@
 # Ventos & Aços
 
+## Peças e Serviços
+
+- [Roupa de Santo sob medida em Salvador](/roupa-de-santo/)
+- [Saia de Santo sob medida](/saia-de-santo/)
+- [Pano da Costa em Salvador](/pano-da-costa/)
+
 Ateliê premium de roupas de Candomblé em Salvador.
 
 Roupas de santo feitas sob medida, com respeito à tradição, tecidos selecionados e acabamento refinado.
@@ -35,6 +41,6 @@ Iansã se relaciona ao movimento, à força e à transformação. Ogum se relaci
 
 ## Contato
 
-WhatsApp: [+55 71 9142-1460](https://wa.me/557191421460)
+WhatsApp: [+55 71 98158-7532](https://wa.me/5571981587532)
 
 Atendimento em Salvador - BA com horário agendado.

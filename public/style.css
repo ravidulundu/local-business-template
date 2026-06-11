@@ -82,6 +82,16 @@ h3 { margin: 0; font-size: 25px; line-height: 1.15; }
 .services-grid article:last-child { grid-column: span 3; min-height: auto; }
 .services-grid p { margin: 14px 0 0; color: var(--muted); }
 .section-cta { margin-top: 38px; text-align: center; }
+.breadcrumb { padding: 18px 0; color: var(--ivory-deep); background: var(--black-soft); font-size: 13px; }
+.breadcrumb ol { display: flex; flex-wrap: wrap; gap: 9px; margin: 0; padding: 0; list-style: none; }
+.breadcrumb li + li::before { content: "/"; margin-right: 9px; color: var(--gold); }
+.breadcrumb a:hover { color: var(--gold-light); }
+.service-hero { min-height: 620px; }
+.service-links article { display: flex; flex-direction: column; }
+.service-links article:last-child { grid-column: auto; min-height: 205px; }
+.service-links .text-link { margin-top: auto; padding-top: 22px; color: var(--bronze); font-weight: 800; text-transform: uppercase; letter-spacing: .06em; font-size: 12px; }
+.service-links .text-link:hover { color: var(--red); }
+.contact-details { margin: 24px 0 0; padding: 0; display: grid; gap: 8px; list-style: none; color: var(--ivory-deep); }
 .premium-panel { padding: clamp(34px, 6vw, 72px); border: 1px solid var(--line-dark); background: linear-gradient(135deg, rgba(200,155,67,.1), transparent 45%); }
 
 .process-list { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); list-style: none; counter-reset: steps; }
@@ -131,6 +141,7 @@ h3 { margin: 0; font-size: 25px; line-height: 1.15; }
   .split-intro, .feature-grid, .premium-panel, .faq-layout { gap: 42px; }
   .services-grid, .process-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .services-grid article:last-child { grid-column: span 2; }
+  .service-links article:last-child { grid-column: auto; }
   .benefits-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -157,6 +168,7 @@ h3 { margin: 0; font-size: 25px; line-height: 1.15; }
   .services-grid, .process-list { grid-template-columns: 1fr; }
   .services-grid article, .process-list li { min-height: auto; }
   .services-grid article:last-child { grid-column: auto; }
+  .service-hero { min-height: 900px; }
   .gallery-grid { grid-auto-rows: 330px; }
   .gallery-grid .gallery-tall { grid-column: span 2; grid-row: span 1; }
   .benefits-grid { grid-template-columns: 1fr; }

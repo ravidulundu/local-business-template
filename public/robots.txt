@@ -1,8 +1,5 @@
 User-agent: *
 Content-Signal: search=yes, ai-train=no, ai-input=yes
 Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /tmp/
 
 Sitemap: https://ventoseacos.com.br/sitemap.xml
