@@ -34,6 +34,11 @@ for route in roupa-de-santo saia-de-santo pano-da-costa; do
   assert_contains "$html" 'class="back-to-top"'
   assert_contains "$html" 'src="/site.js"'
   assert_contains "$html" 'class="service-gallery"'
+  assert_contains "$html" 'class="footer-contact"'
+  assert_contains "$html" '<svg aria-hidden="true"'
+  if grep -Fq '>Instagram</a>' "$html"; then
+    fail "${html#$ROOT/} must use the Instagram icon, not text inside the circular button"
+  fi
   lazy_count=$(grep -o 'loading="lazy"' "$html" | wc -l | tr -d ' ')
   [ "$lazy_count" -ge 3 ] || fail "${html#$ROOT/} needs at least 3 lazy-loaded content images"
   for href in / /roupa-de-santo/ /saia-de-santo/ /pano-da-costa/; do
