@@ -66,16 +66,17 @@ assert_contains "$PUBLIC/style.css" 'grid-template-columns: minmax(0, 1.45fr) mi
 assert_contains "$PUBLIC/style.css" '.service-gallery figure:first-child { grid-row: 1 / span 2; }'
 assert_contains "$PUBLIC/style.css" '.footer-brand img { width: 100%; height: 100%; object-fit: contain; }'
 assert_contains "$PUBLIC/style.css" '.brand img { width: 100%; height: 100%; object-fit: contain; }'
+assert_file "$PUBLIC/assets/Logo-br.svg"
 [ ! -e "$PUBLIC/assets/logo-footer.svg" ] || fail "footer-specific logo asset must not exist"
 if grep -Fq '.footer-brand img { position: absolute' "$PUBLIC/style.css"; then
   fail "footer logo must not use absolute oversized cropping"
 fi
 if grep -R -Fq 'logo-footer.svg' "$PUBLIC"; then
-  fail "header and footer must use the same logo.svg"
+  fail "header and footer must use the same Logo-br.svg"
 fi
 for page in "$PUBLIC/index.html" "$PUBLIC/roupa-de-santo/index.html" "$PUBLIC/saia-de-santo/index.html" "$PUBLIC/pano-da-costa/index.html"; do
-  logo_count=$(grep -o 'src="/assets/logo.svg"' "$page" | wc -l | tr -d ' ')
-  [ "$logo_count" -ge 2 ] || fail "${page#$ROOT/} must use logo.svg in header and footer"
+  logo_count=$(grep -o 'src="/assets/Logo-br.svg"' "$page" | wc -l | tr -d ' ')
+  [ "$logo_count" -ge 2 ] || fail "${page#$ROOT/} must use Logo-br.svg in header and footer"
 done
 
 for page in "$PUBLIC/roupa-de-santo/index.html" "$PUBLIC/saia-de-santo/index.html" "$PUBLIC/pano-da-costa/index.html"; do
