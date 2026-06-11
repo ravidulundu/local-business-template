@@ -33,10 +33,23 @@ for route in roupa-de-santo saia-de-santo pano-da-costa; do
   assert_contains "$html" 'aria-label="Breadcrumb"'
   assert_contains "$html" 'class="back-to-top"'
   assert_contains "$html" 'src="/site.js"'
+  assert_contains "$html" 'class="service-gallery"'
+  lazy_count=$(grep -o 'loading="lazy"' "$html" | wc -l | tr -d ' ')
+  [ "$lazy_count" -ge 3 ] || fail "${html#$ROOT/} needs at least 3 lazy-loaded content images"
   for href in / /roupa-de-santo/ /saia-de-santo/ /pano-da-costa/; do
     assert_contains "$html" "href=\"$href\""
   done
 done
+
+assert_contains "$PUBLIC/roupa-de-santo/index.html" '/assets/responsive/costureira-trabalhando-768.webp'
+assert_contains "$PUBLIC/roupa-de-santo/index.html" '/assets/responsive/conjunto-vermelho-branco-640.webp'
+assert_contains "$PUBLIC/roupa-de-santo/index.html" '/assets/responsive/detalhe-renda-640.webp'
+assert_contains "$PUBLIC/saia-de-santo/index.html" '/assets/detalhe-renda-branca.webp'
+assert_contains "$PUBLIC/saia-de-santo/index.html" '/assets/peca-branca-dourada.webp'
+assert_contains "$PUBLIC/saia-de-santo/index.html" '/assets/responsive/tecidos-premium-768.webp'
+assert_contains "$PUBLIC/pano-da-costa/index.html" '/assets/responsive/fios-contas-guias-640.webp'
+assert_contains "$PUBLIC/pano-da-costa/index.html" '/assets/responsive/detalhe-bordado-ouro-640.webp'
+assert_contains "$PUBLIC/pano-da-costa/index.html" '/assets/atelier-costura.webp'
 
 assert_contains "$PUBLIC/index.html" 'class="back-to-top"'
 assert_contains "$PUBLIC/index.html" 'src="/site.js"'
