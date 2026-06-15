@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Roupas de Candomblé Sob Medida em Salvador | Ventos &amp; Aços</title>
-  <meta name="description" content="Ateliê de roupas de Candomblé sob medida em Salvador. Roupa de santo, saia, pano da costa e enxoval com atendimento agendado e orçamento pelo WhatsApp.">
+  <meta name="description" content="Ateliê de roupas de Candomblé e Umbanda sob medida em Salvador. Saia, pano da costa, camisú e enxoval com atendimento agendado e orçamento pelo WhatsApp.">
   <meta name="theme-color" content="#120d09">
   <link rel="canonical" href="https://ventoseacos.com.br/">
   <link rel="alternate" hreflang="pt-BR" href="https://ventoseacos.com.br/">
@@ -29,12 +29,12 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/ventos-acos-favicon-512.png">
   <link rel="apple-touch-icon" href="/assets/ventos-acos-favicon-512.png">
   <link rel="preload" href="/assets/hero-atelier.webp" as="image" imagesrcset="/assets/responsive/hero-atelier-768.webp 768w, /assets/responsive/hero-atelier-1200.webp 1200w, /assets/hero-atelier.webp 1807w" imagesizes="100vw" fetchpriority="high">
-  <link rel="stylesheet" href="/style.css?v=20260606-2">
+  <link rel="stylesheet" href="/style.css?v=20260614-1">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "ClothingStore"],
     "@id": "https://ventoseacos.com.br/#localbusiness",
     "name": "Ventos & Aços",
     "url": "https://ventoseacos.com.br/",
@@ -42,13 +42,26 @@
     "image": "https://ventoseacos.com.br/assets/hero-atelier.webp",
     "logo": "https://ventoseacos.com.br/assets/Logo-br.svg",
     "telephone": "+55 71 98158-7532",
+    "email": "contato@ventoseacos.com.br",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "R. Alm. Alves Câmara, 3 - AP 102",
+      "streetAddress": "Rua Almirante Alves Câmara, 3, Apto 102, Engenho Velho de Brotas",
       "addressLocality": "Salvador",
       "addressRegion": "BA",
       "postalCode": "40243-005",
       "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -12.983888,
+      "longitude": -38.502062
+    },
+    "hasMap": "https://maps.app.goo.gl/ZS5zg735UQAWk8v99",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55 71 98158-7532",
+      "contactType": "customer service",
+      "availableLanguage": "pt-BR"
     },
     "areaServed": {
       "@type": "City",
@@ -73,7 +86,13 @@
       "Roupa de função",
       "Roupa de ogan",
       "Roupa de baiana",
-      "Enxoval para iniciados"
+      "Enxoval para iniciados",
+      "Roupa de Umbanda sob medida",
+      "Roupas de Candomblé feminina"
+    ],
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"12:00"}
     ],
     "sameAs": ["https://www.instagram.com/ventosacos/"]
   }
@@ -94,7 +113,9 @@
       {"@type":"Question","name":"Fazem enxoval para iniciado no Candomblé?","acceptedAnswer":{"@type":"Answer","text":"Sim. O ateliê pode produzir diferentes peças para enxoval, conforme a lista e a orientação apresentadas pelo cliente."}},
       {"@type":"Question","name":"Posso enviar referência pelo WhatsApp?","acceptedAnswer":{"@type":"Answer","text":"Sim. Envie fotos ou referências pelo WhatsApp para iniciar a conversa sobre modelo, tecido, acabamento e medidas."}},
       {"@type":"Question","name":"O orçamento é feito pelo WhatsApp?","acceptedAnswer":{"@type":"Answer","text":"Sim. O primeiro atendimento e o orçamento são iniciados pelo WhatsApp, com as informações da encomenda."}},
-      {"@type":"Question","name":"Atendem em Salvador?","acceptedAnswer":{"@type":"Answer","text":"Sim. A Ventos & Aços é um ateliê de roupas de Candomblé em Salvador, Bahia."}}
+      {"@type":"Question","name":"Atendem em Salvador?","acceptedAnswer":{"@type":"Answer","text":"Sim. A Ventos & Aços é um ateliê de roupas de Candomblé em Salvador, Bahia."}},
+      {"@type":"Question","name":"Fazem roupas de Umbanda sob medida?","acceptedAnswer":{"@type":"Answer","text":"Sim. Produzimos roupas de Umbanda sob medida, incluindo saia branca, pano da costa e camisú, conforme a necessidade de cada cliente."}},
+      {"@type":"Question","name":"Fazem roupas de Candomblé feminina?","acceptedAnswer":{"@type":"Answer","text":"Sim. Produzimos roupas de Candomblé feminina sob medida, incluindo saia de santo, pano da costa, camisú e roupa de baiana, conforme referência e medidas fornecidas."}}
     ]
   }
   </script>
@@ -107,7 +128,7 @@
       <a class="brand" href="#top" aria-label="Ventos & Aços - início">
         <img src="/assets/Logo-br.svg" width="1160" height="251" alt="Ventos & Aços">
       </a>
-      <nav class="main-nav" aria-label="Navegação principal">
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
         <a href="/">Início</a>
         <a href="#servicos">Serviços</a>
         <a href="/roupa-de-santo/">Roupa de Santo</a>
@@ -116,6 +137,7 @@
         <a href="#contato">Contato</a>
       </nav>
       <a class="button button-gold header-cta whatsapp-link" href="https://wa.me/5571981587532" data-whatsapp-source="Cabeçalho">WhatsApp</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu de navegação"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -127,7 +149,7 @@
       </picture>
       <div class="hero-shade"></div>
       <div class="container hero-content">
-        <p class="eyebrow">Ateliê em Salvador, Bahia</p>
+        <p class="eyebrow">Ateliê no Engenho Velho de Brotas, Salvador</p>
         <h1 id="hero-title">Roupas de Candomblé Sob Medida em Salvador</h1>
         <p class="hero-subheadline">Roupa de santo feminina, masculina e completa, roupa branca para terreiro, camisu, saia, pano da costa, ojá, roupa de baiana, roupa de ração e enxoval para iniciados, feitos sob medida conforme a orientação de cada cliente.</p>
         <div class="hero-actions">
@@ -173,9 +195,9 @@
     <section class="section section-red" aria-labelledby="roupa-branca-title">
       <div class="container narrow">
         <p class="section-kicker">Para casas de axé e terreiros</p>
-        <h2 id="roupa-branca-title">Roupa Branca para Candomblé e Terreiro</h2>
-        <p class="lead">Confeccionamos roupa branca para Candomblé e roupa branca para terreiro sob medida, incluindo camisu, saia branca, pano da costa, ojá, roupa de ração e outras composições solicitadas pelo cliente.</p>
-        <p>As peças são produzidas conforme a necessidade informada, com atenção às medidas, ao conforto, ao tecido e ao acabamento combinado.</p>
+        <h2 id="roupa-branca-title">Roupa Branca para Candomblé, Umbanda e Terreiro</h2>
+        <p class="lead">Confeccionamos roupas de Candomblé e Umbanda sob medida, incluindo camisu, saia branca, pano da costa, ojá, roupa de ração e outras composições solicitadas pelo cliente.</p>
+        <p>Atendemos praticantes de Candomblé e Umbanda. As peças são produzidas conforme a necessidade informada, com atenção às medidas, ao conforto, ao tecido e ao acabamento combinado.</p>
       </div>
     </section>
 
@@ -215,6 +237,7 @@
           <article><h3>Roupa de santo completa</h3><p>Conjunto de peças definido conforme a necessidade apresentada.</p></article>
           <article><h3>Enxoval para iniciados</h3><p>Múltiplas peças organizadas conforme lista e orientação do cliente.</p></article>
           <article><h3>Peças para casa de axé</h3><p>Costura personalizada para demandas de casas de axé e terreiros.</p></article>
+          <article><h3>Roupa de Umbanda</h3><p>Saia branca, pano da costa e camisú sob medida para praticantes de Umbanda.</p></article>
         </div>
         <div class="section-cta">
           <a class="button button-dark whatsapp-link" href="https://wa.me/5571981587532" data-whatsapp-source="Peças">Pedir orçamento das peças</a>
@@ -266,7 +289,7 @@
           <figure class="gallery-tall"><img src="/assets/roupa-santo-premium.webp" srcset="/assets/responsive/roupa-santo-premium-640.webp 640w, /assets/roupa-santo-premium.webp 1024w" sizes="(max-width: 680px) 100vw, 50vw" width="1024" height="1536" alt="Roupa de santo feminina sob medida" loading="lazy" decoding="async"><figcaption>Roupa de santo feminina</figcaption></figure>
           <figure><img src="/assets/conjunto-branco-dourado.webp" srcset="/assets/responsive/conjunto-branco-dourado-640.webp 640w, /assets/conjunto-branco-dourado.webp 1023w" sizes="(max-width: 680px) 100vw, 25vw" width="1023" height="1537" alt="Roupa de santo completa em Salvador" loading="lazy" decoding="async"><figcaption>Roupa de santo completa</figcaption></figure>
           <figure><img src="/assets/conjunto-vermelho-branco.webp" srcset="/assets/responsive/conjunto-vermelho-branco-640.webp 640w, /assets/conjunto-vermelho-branco.webp 1023w" sizes="(max-width: 680px) 100vw, 25vw" width="1023" height="1537" alt="Roupa de santo masculina sob medida" loading="lazy" decoding="async"><figcaption>Modelagem sob medida</figcaption></figure>
-          <figure><img src="/assets/costureira-trabalhando.webp" srcset="/assets/responsive/costureira-trabalhando-768.webp 768w, /assets/costureira-trabalhando.webp 1537w" sizes="(max-width: 680px) 100vw, 25vw" width="1537" height="1023" alt="Camisu branco feito artesanalmente" loading="lazy" decoding="async"><figcaption>Costura artesanal</figcaption></figure>
+          <figure><img src="/assets/costureira-trabalhando.webp" srcset="/assets/responsive/costureira-trabalhando-768.webp 768w, /assets/costureira-trabalhando.webp 1537w" sizes="(max-width: 680px) 100vw, 25vw" width="1537" height="1023" alt="Costureira trabalhando na produção artesanal de roupa de santo" loading="lazy" decoding="async"><figcaption>Costura artesanal</figcaption></figure>
           <figure><img src="/assets/detalhe-renda.webp" srcset="/assets/responsive/detalhe-renda-640.webp 640w, /assets/detalhe-renda.webp 1536w" sizes="(max-width: 680px) 100vw, 25vw" width="1536" height="1024" alt="Saia branca para Candomblé sob medida" loading="lazy" decoding="async"><figcaption>Renda e acabamento</figcaption></figure>
           <figure><img src="/assets/detalhe-bordado-ouro.webp" srcset="/assets/responsive/detalhe-bordado-ouro-640.webp 640w, /assets/detalhe-bordado-ouro.webp 1537w" sizes="(max-width: 680px) 100vw, 25vw" width="1537" height="1023" alt="Pano da costa para roupa de santo" loading="lazy" decoding="async"><figcaption>Detalhes personalizados</figcaption></figure>
           <figure><img src="/assets/tecidos-premium.webp" srcset="/assets/responsive/tecidos-premium-768.webp 768w, /assets/tecidos-premium.webp 1537w" sizes="(max-width: 680px) 100vw, 25vw" width="1537" height="1023" alt="Ojá para roupa de Candomblé" loading="lazy" decoding="async"><figcaption>Tecidos selecionados</figcaption></figure>
@@ -285,7 +308,7 @@
           <h2 id="diferenciais-title">Por que escolher a Ventos &amp; Aços</h2>
         </div>
         <ul class="benefits-grid">
-          <li>Peças sob medida</li><li>Atendimento direto com a costureira</li><li>Produção artesanal</li><li>Foco em roupas de Candomblé</li><li>Atendimento em Salvador</li><li>Acabamento cuidadoso</li><li>Respeito à orientação de cada cliente</li><li>Orçamento pelo WhatsApp</li>
+          <li>Peças sob medida</li><li>Atendimento direto com a costureira</li><li>Produção artesanal</li><li>Roupas de Candomblé e Umbanda</li><li>Atendimento em Salvador</li><li>Acabamento cuidadoso</li><li>Respeito à orientação de cada cliente</li><li>Orçamento pelo WhatsApp</li>
         </ul>
       </div>
     </section>
@@ -309,6 +332,8 @@
           <details><summary>Posso enviar referência pelo WhatsApp?</summary><p>Sim. Envie fotos ou referências pelo WhatsApp para iniciar a conversa sobre modelo, tecido, acabamento e medidas.</p></details>
           <details><summary>O orçamento é feito pelo WhatsApp?</summary><p>Sim. O primeiro atendimento e o orçamento são iniciados pelo WhatsApp, com as informações da encomenda.</p></details>
           <details><summary>Atendem em Salvador?</summary><p>Sim. A Ventos & Aços é um ateliê de roupas de Candomblé em Salvador, Bahia.</p></details>
+          <details><summary>Fazem roupas de Umbanda sob medida?</summary><p>Sim. Produzimos roupas de Umbanda sob medida, incluindo saia branca, pano da costa e camisú, conforme a necessidade de cada cliente.</p></details>
+          <details><summary>Fazem roupas de Candomblé feminina?</summary><p>Sim. Produzimos roupas de Candomblé feminina sob medida, incluindo saia de santo, pano da costa, camisú e roupa de baiana, conforme referência e medidas fornecidas.</p></details>
         </div>
       </div>
     </section>
@@ -319,9 +344,14 @@
         <h2 id="contato-title">Encomende sua roupa de Candomblé sob medida</h2>
         <p>Fale com a Ventos &amp; Aços pelo WhatsApp, envie sua referência e receba orientação sobre modelo, tecido, medidas, prazo e orçamento.</p>
         <a class="button button-gold whatsapp-link" href="https://wa.me/5571981587532" data-whatsapp-source="Final">Chamar no WhatsApp</a>
+        <ul class="contact-details" style="margin-top:32px;text-align:left;font-size:14px;opacity:.82;">
+          <li>Rua Almirante Alves Câmara, 3, Apto 102 — Engenho Velho de Brotas, Salvador</li>
+          <li>+55 71 98158-7532 · contato@ventoseacos.com.br</li>
+          <li>Seg–Sex 9h–17h30 · Sáb 9h–12h · Atendimento com horário agendado</li>
+        </ul>
       </div>
     </section>
-    <div class="container"><p class="editorial-note">Conteúdo preparado e revisado pela equipe do ateliê Ventos &amp; Aços. Atualizado em 11 de junho de 2026.</p></div>
+    <div class="container"><p class="editorial-note">Conteúdo preparado e revisado pela equipe do ateliê Ventos &amp; Aços. Atualizado em 14 de junho de 2026.</p></div>
   </main>
 
   <footer class="site-footer">
@@ -329,7 +359,7 @@
       <span class="footer-brand">
         <img src="/assets/Logo-br.svg" width="1160" height="251" alt="Ventos & Aços">
       </span>
-      <p class="footer-contact">Ateliê de roupas de Candomblé sob medida em Salvador, Bahia.</p>
+      <p class="footer-contact">Rua Almirante Alves Câmara, 3, Apto 102 — Engenho Velho de Brotas<br>Salvador, BA · CEP 40243-005<br>+55 71 98158-7532 · <a href="mailto:contato@ventoseacos.com.br">contato@ventoseacos.com.br</a></p>
       <a class="social-link" href="https://www.instagram.com/ventosacos/" rel="noopener noreferrer" target="_blank" aria-label="Ventos & Aços no Instagram">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
@@ -341,7 +371,7 @@
   </footer>
 
   <a class="sticky-whatsapp whatsapp-link" href="https://wa.me/5571981587532" data-whatsapp-source="Botão fixo" aria-label="Solicitar orçamento pelo WhatsApp">WhatsApp</a>
-  <a class="back-to-top" href="#top" aria-label="Sayfanın başına dön" title="Yukarı dön">↑</a>
+  <a class="back-to-top" href="#top" aria-label="Voltar ao topo" title="Voltar ao topo">↑</a>
 
   <script>
     (() => {
