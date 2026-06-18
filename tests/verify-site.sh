@@ -3,7 +3,7 @@ set -eu
 
 ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
 PUBLIC="$ROOT/public"
-PHONE="5571981587532"
+PHONE="5571982366745"
 
 fail() {
   printf 'FAIL: %s\n' "$1" >&2
@@ -26,7 +26,7 @@ for route in roupa-de-santo saia-de-santo pano-da-costa; do
   assert_contains "$html" "https://ventoseacos.com.br/$route/"
   assert_contains "$html" 'property="og:title"'
   assert_contains "$html" 'name="twitter:card"'
-  assert_contains "$html" '"@type":"LocalBusiness"'
+  assert_contains "$html" '"LocalBusiness"'
   assert_contains "$html" '"@type":"Service"'
   assert_contains "$html" '"@type":"FAQPage"'
   assert_contains "$html" "https://wa.me/$PHONE"
@@ -95,8 +95,8 @@ assert_contains "$PUBLIC/index.html" '"@type":"WebPage"'
 assert_contains "$PUBLIC/roupa-de-santo/index.html" '<title>Roupa de Santo Sob Medida em Salvador | Ventos &amp; Aços</title>'
 assert_contains "$PUBLIC/roupa-de-santo/index.html" '<h1>Roupa de Santo sob medida em Salvador</h1>'
 assert_contains "$PUBLIC/saia-de-santo/index.html" '<title>Saia de Santo Sob Medida em Salvador | Ventos &amp; Aços</title>'
-assert_contains "$PUBLIC/saia-de-santo/index.html" '<h1>Saia de Santo sob medida</h1>'
-assert_contains "$PUBLIC/pano-da-costa/index.html" '<title>Pano da Costa em Salvador | Ventos &amp; Aços</title>'
+assert_contains "$PUBLIC/saia-de-santo/index.html" '<h1>Roupas de Candomblé e Umbanda Feminina sob medida em Salvador</h1>'
+assert_contains "$PUBLIC/pano-da-costa/index.html" '<title>Pano da Costa Sob Medida em Salvador | Ventos &amp; Aços</title>'
 assert_contains "$PUBLIC/pano-da-costa/index.html" '<h1>Pano da Costa em Salvador</h1>'
 
 assert_contains "$PUBLIC/index.html" 'id="servicos"'

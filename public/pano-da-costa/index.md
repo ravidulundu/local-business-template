@@ -6,7 +6,7 @@ A Ventos & Aços produz pano da costa em Salvador com tecidos selecionados e aca
 
 Tecido, dimensão e acabamento são definidos para harmonizar o pano da costa com roupas de santo, saias e batas. O atendimento é realizado sob encomenda e com horário agendado.
 
-Solicite orçamento pelo WhatsApp: [+55 71 98158-7532](https://wa.me/5571981587532).
+Solicite orçamento pelo WhatsApp: [+55 71 98236-6745](https://wa.me/5571982366745).
 
 ## Tecido, proporção e acabamento
 

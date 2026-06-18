@@ -41,6 +41,6 @@ Iansã se relaciona ao movimento, à força e à transformação. Ogum se relaci
 
 ## Contato
 
-WhatsApp: [+55 71 98158-7532](https://wa.me/5571981587532)
+WhatsApp: [+55 71 98236-6745](https://wa.me/5571982366745)
 
 Atendimento em Salvador - BA com horário agendado.

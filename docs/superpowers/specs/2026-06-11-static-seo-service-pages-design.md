@@ -18,7 +18,7 @@ Every service page has its requested title, description, canonical URL, Open Gra
 
 ## Business Data
 
-The site keeps the verified existing phone number `+55 71 98158-7532` and WhatsApp number `5571981587532`. Address, email, Instagram, and opening hours follow the supplied business details.
+The site keeps the verified existing phone number `+55 71 98236-6745` and WhatsApp number `5571982366745`. Address, email, Instagram, and opening hours follow the supplied business details.
 
 ## Verification
 

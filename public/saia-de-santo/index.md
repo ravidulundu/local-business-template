@@ -6,7 +6,7 @@ A Ventos & Aços confecciona saia de santo sob medida em Salvador. Volume, caime
 
 Cada saia é produzida por encomenda. O atendimento organiza medidas, referência, finalidade, opções de tecido e detalhes de renda antes do início da produção.
 
-Solicite orçamento pelo WhatsApp: [+55 71 98158-7532](https://wa.me/5571981587532).
+Solicite orçamento pelo WhatsApp: [+55 71 98236-6745](https://wa.me/5571982366745).
 
 ## Volume, tecido e caimento
 
