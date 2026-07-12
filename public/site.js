@@ -1,4 +1,17 @@
 (() => {
+  const WHATSAPP_NUMBER = "5571982366745";
+  const BASE_MESSAGE = "Olá, vim pelo site da Ventos & Aços e quero solicitar um orçamento para roupa de Candomblé ou Umbanda sob medida.";
+
+  document.querySelectorAll('a[href^="https://wa.me/5571982366745"], .whatsapp-link').forEach((link) => {
+    const source = link.dataset.whatsappSource || link.textContent.trim() || "Site";
+    const message = `${BASE_MESSAGE}\n\nOrigem: ${source}`;
+    link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+  });
+})();
+
+(() => {
   // Chrome: backdrop-filter on .site-header creates a new containing block,
   // breaking position:fixed on children. Move nav outside header on mobile.
   const siteHeader = document.querySelector(".site-header");
