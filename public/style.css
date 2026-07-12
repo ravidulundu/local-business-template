@@ -132,8 +132,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .brand { width: 206px; height: 58px; display: block; flex: 0 0 auto; }
 .brand img { width: 100%; height: 100%; object-fit: contain; }
 .main-nav { display: flex; align-items: center; gap: clamp(var(--space-4), 2vw, var(--space-8)); color: var(--ivory-deep); font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
-.main-nav a { padding: var(--space-3) 0; transition: color .18s var(--ease); }
+.main-nav a { padding: var(--space-3) 0; white-space: nowrap; transition: color .18s var(--ease); }
 .main-nav a:hover { color: var(--gold-light); }
+.main-nav a[aria-current="page"] { color: var(--gold-light); }
 .nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; padding: 10px; border: none; background: none; cursor: pointer; color: var(--ivory-deep); flex-shrink: 0; }
 .nav-toggle span { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 1px; transition: transform .2s var(--ease), opacity .2s var(--ease); }
 .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -203,7 +204,7 @@ h3 { margin: 0; font-size: var(--step-2); line-height: 1.18; }
 .services-grid p { margin: var(--space-4) 0 0; color: var(--muted); }
 .section-cta { margin-top: var(--space-10); text-align: center; }
 .breadcrumb { padding: var(--space-4) 0; color: var(--ivory-deep); background: var(--black-soft); font-size: var(--step--1); border-bottom: 1px solid var(--line-dark); }
-.breadcrumb ol { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+.breadcrumb ol { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-block: 0; margin-inline: auto; padding: 0; list-style: none; }
 .breadcrumb li + li::before { content: "/"; margin-right: var(--space-2); color: var(--gold); }
 .breadcrumb a:hover { color: var(--gold-light); }
 .service-hero { min-height: 620px; }
@@ -295,13 +296,16 @@ h3 { margin: 0; font-size: var(--step-2); line-height: 1.18; }
 .back-to-top { position: fixed; right: 18px; bottom: 18px; z-index: 41; width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid var(--gold-light); border-radius: 50%; color: var(--gold-light); background: rgba(13, 9, 7, .94); box-shadow: 0 12px 30px rgba(0,0,0,.3); font-size: 22px; line-height: 1; opacity: 0; pointer-events: none; transform: translateY(12px); transition: opacity .2s ease, transform .2s ease, color .2s ease, background .2s ease; }
 .back-to-top:hover { color: var(--ink); background: var(--gold-light); transform: translateY(-2px); }
 .back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+body.nav-open { overflow: hidden; }
+body.nav-open .sticky-whatsapp,
+body.nav-open .back-to-top { opacity: 0; pointer-events: none; }
 
-@media (max-width: 980px) {
+@media (max-width: 1100px) {
   :root { --header-height: 78px; }
   .nav-toggle { display: flex; }
   .main-nav { position: fixed; inset: var(--header-height) 0 0 0; z-index: 29; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 0 32px; background: rgba(13,9,7,.97); backdrop-filter: blur(14px); overflow-y: auto; transform: translateX(100%); transition: transform .25s ease; pointer-events: none; }
   .main-nav.is-open { transform: translateX(0); pointer-events: auto; }
-  .main-nav a { padding: 18px 24px; font-size: 14px; letter-spacing: .06em; border-bottom: 1px solid var(--line-dark); }
+  .main-nav a { min-height: 48px; display: flex; align-items: center; padding: 12px 24px; font-size: 14px; letter-spacing: .06em; border-bottom: 1px solid var(--line-dark); }
   .split-intro, .feature-grid, .premium-panel, .faq-layout, .location-grid { gap: 42px; }
   .services-grid, .process-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .services-grid article:last-child { grid-column: span 2; }
@@ -316,7 +320,7 @@ h3 { margin: 0; font-size: var(--step-2); line-height: 1.18; }
   .container, .narrow { width: min(100% - 28px, 1160px); }
   .header-inner { gap: 12px; }
   .brand { width: 158px; height: 52px; }
-  .header-cta { min-height: 42px; padding: 10px 13px; font-size: 10px; }
+  .header-cta { min-height: 44px; padding: 10px 12px; font-size: 11px; }
   .hero { height: auto; min-height: 100svh; aspect-ratio: auto; background: var(--black); }
   .hero-picture { inset: 0; height: 100%; }
   .hero-image { inset: 0; height: 100%; object-position: center; }
