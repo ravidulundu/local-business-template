@@ -36,7 +36,7 @@ O valor e o prazo dependem de tecido, complexidade, detalhes, medidas, agenda do
 2. Informe ocasião, prazo, casa e orientação do responsável religioso.
 3. Defina tecidos, cores, renda, bordado, volume, torço e acabamento.
 4. Receba orçamento após avaliação de complexidade, material e agenda.
-5. Agende medidas, produção e retirada presencial no ateliê.
+5. Agende conferência de medidas, produção e retirada presencial no ateliê.
 
 ## Contato
 
