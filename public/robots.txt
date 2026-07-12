@@ -2,4 +2,19 @@ User-agent: *
 Content-Signal: search=yes, ai-train=no, ai-input=yes
 Allow: /
 
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://ventoseacos.com.br/sitemap.xml
