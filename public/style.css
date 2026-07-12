@@ -98,6 +98,9 @@ h3 { margin: 0; font-size: var(--step-2); line-height: 1.18; }
 .hero-actions p { max-width: 320px; margin: 0; color: var(--ivory-deep); font-size: var(--step--1); line-height: 1.65; }
 
 .section { padding-block: var(--section-y); }
+.section + .section-light,
+.section + .faq-section,
+.section + .location-section { border-top: 1px solid rgba(24, 17, 12, .06); }
 .section-light { color: var(--ink); background: var(--ivory); }
 .section-dark { color: var(--ivory); background: var(--black-soft); }
 .section-red { color: var(--ivory); text-align: center; background: radial-gradient(circle at top, #792323, var(--red) 58%, #310b0b); }
@@ -174,6 +177,8 @@ h3 { margin: 0; font-size: var(--step-2); line-height: 1.18; }
 .benefits-grid { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); list-style: none; }
 .benefits-grid li { min-height: 130px; display: flex; align-items: center; padding: var(--space-7); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); font-family: var(--font-display); font-size: var(--step-1); line-height: 1.25; }
 .benefits-grid li::before { content: "+"; margin-right: var(--space-3); color: var(--gold); }
+.section-dark .benefits-grid,
+.section-dark .benefits-grid li { border-color: var(--line-dark); }
 
 .faq-section { background: #eee4d4; color: var(--ink); }
 .faq-layout { align-items: start; }
@@ -185,9 +190,13 @@ h3 { margin: 0; font-size: var(--step-2); line-height: 1.18; }
 .faq-list details[open] summary::after { content: "−"; transform: rotate(180deg); background: rgba(200,155,67,.12); }
 .faq-list p { margin: calc(var(--space-2) * -1) var(--space-12) var(--space-6) 0; color: var(--muted); }
 
-.final-cta { text-align: center; background: linear-gradient(rgba(13,9,7,.78), rgba(13,9,7,.94)), url("/assets/tecidos-premium.webp") center/cover; }
+.final-cta { padding-block: clamp(var(--space-16), 7vw, var(--space-24)); text-align: center; background: linear-gradient(rgba(13,9,7,.78), rgba(13,9,7,.94)), url("/assets/tecidos-premium.webp") center/cover; }
 .final-cta-inner { max-width: 860px; }
 .final-cta p { max-width: 720px; margin: var(--space-6) auto var(--space-8); color: var(--ivory-deep); }
+.not-found-section { min-height: calc(100svh - var(--header-height)); display: grid; align-items: center; color: var(--ink); background: radial-gradient(circle at 20% 0%, rgba(200,155,67,.16), transparent 32%), var(--ivory); }
+.not-found-card { margin-block: var(--space-16); background: rgba(255,255,255,.48); }
+.not-found-card h1 { font-size: var(--step-4); }
+.not-found-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-8); }
 .site-footer { padding-block: var(--space-16) var(--space-6); border-top: 1px solid var(--line-dark); background: var(--black); }
 .footer-grid { display: grid; grid-template-columns: minmax(210px, .9fr) minmax(280px, 1.2fr) minmax(220px, .8fr); gap: clamp(var(--space-8), 6vw, var(--space-20)); color: var(--ivory-deep); font-size: var(--step--1); }
 .footer-brand-column { display: grid; align-content: start; gap: var(--space-5); }
@@ -202,10 +211,11 @@ h3 { margin: 0; font-size: var(--step-2); line-height: 1.18; }
 .footer-note { color: var(--ivory-deep); }
 .footer-bottom { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--line-dark); color: rgba(231, 219, 199, .78); font-size: .78rem; }
 .footer-bottom p { margin: 0; }
+.footer-bottom .editorial-note { margin: 0; color: inherit; font-size: inherit; letter-spacing: .01em; }
 .social-link { width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid var(--line-dark); border-radius: 50%; transition: color .2s var(--ease), border-color .2s var(--ease), transform .2s var(--ease); }
 .social-link:hover { color: var(--ivory); border-color: var(--gold-light); transform: translateY(-2px); }
 .social-link svg { width: 23px; height: 23px; }
-.sticky-whatsapp { position: fixed; right: 18px; bottom: 18px; z-index: 40; min-height: 48px; display: none; align-items: center; padding: 12px 18px; border-radius: 999px; color: #10220f; background: #70d66a; box-shadow: 0 12px 30px rgba(0,0,0,.35); font-size: 12px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; transition: opacity .2s ease, transform .2s ease; }
+.sticky-whatsapp { position: fixed; right: 18px; bottom: 18px; z-index: 40; min-height: 48px; display: none; align-items: center; padding: 12px 18px; border-radius: 999px; color: #10220f; background: #70d66a; box-shadow: 0 12px 30px rgba(0,0,0,.35); font-size: 12px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; transition: opacity .2s var(--ease), transform .2s var(--ease); }
 .sticky-whatsapp.is-hidden { opacity: 0; pointer-events: none; transform: translateY(12px); }
 .back-to-top { position: fixed; right: 18px; bottom: 18px; z-index: 41; width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid var(--gold-light); border-radius: 50%; color: var(--gold-light); background: rgba(13, 9, 7, .94); box-shadow: 0 12px 30px rgba(0,0,0,.3); font-size: 22px; line-height: 1; opacity: 0; pointer-events: none; transform: translateY(12px); transition: opacity .2s ease, transform .2s ease, color .2s ease, background .2s ease; }
 .back-to-top:hover { color: var(--ink); background: var(--gold-light); transform: translateY(-2px); }
@@ -236,11 +246,12 @@ h3 { margin: 0; font-size: var(--step-2); line-height: 1.18; }
   .hero-picture { inset: 0; height: 100%; }
   .hero-image { inset: 0; height: 100%; object-position: center; }
   .hero-shade { background: linear-gradient(180deg, rgba(13,9,7,.03) 0, rgba(13,9,7,.08) 34%, rgba(13,9,7,.58) 54%, rgba(13,9,7,.96) 72%, var(--black) 100%); }
-  .hero-content { align-self: auto; padding-block: 440px 72px; transform: none; }
+  .hero-content { align-self: end; padding-block: min(46svh, 380px) var(--space-12); transform: none; }
   h1 { font-size: clamp(43px, 13vw, 66px); }
   .hero-actions { align-items: stretch; }
   .hero-actions .button { width: 100%; }
   .hero-actions p { max-width: none; text-align: center; }
+  .not-found-actions .button { width: 100%; }
   .split-intro, .feature-grid, .premium-panel, .faq-layout, .location-grid { grid-template-columns: 1fr; }
   .feature-image { max-height: 500px; }
   .feature-image img { height: 500px; }
